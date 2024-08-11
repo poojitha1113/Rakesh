@@ -1,0 +1,43 @@
+package Constants;
+
+public class DestinationColumnConstants {
+	  public static final String LONG_NAME="Name";
+	  public static final String SHORT_NAME="Name";
+	  public static final String NAME_FILTER="destination_name";
+	  public static final String LONG_STORAGE="Storage Usage";
+	  public static final String SHORT_STORAGE="Storage Usage";
+	  public static final String STORAGE_FILTER="storage_usage";
+	  public static final String LONG_TYPE="Type";
+	  public static final String SHORT_TYPE="Type";
+	  public static final String TYPE_FILTER="destination_type";
+	  public static final String LONG_ORGANIZATION="Organization";
+	  public static final String SHORT_ORGANIZATION="Organization";
+	  public static final String ORGANIZATION_FILTER="organization_id";
+	  public static final String LONG_LOCATION="Data Center Location";
+	  public static final String SHORT_LOCATION="Location";
+	  public static final String LOCATION_FILTER="datacenter_location";
+	  public static final String LONG_RETENTION="Retention";
+	  public static final String SHORT_RETENTION="Retention";
+	  public static final String RETENTION_FILTER="retention_name";
+	  public static final String LONG_REGION="Data Center Region";
+	  public static final String SHORT_REGION="Region";
+	  public static final String REGION_FILTER="datacenter_region";
+	  public static final String LONG_NUM_SOURCES="Source Count";
+	  public static final String SHORT_NUM_SOURCES="Source Count";
+	  public static final String NUM_SOURCES_FILTER="source_count";
+	  public static final String LONG_LATEST_JOB="Latest Job";
+	  public static final String SHORT_LATEST_JOB="Latest Job";
+	  public static final String LATEST_JOB_FILTER="last_job";
+	  public static final String LONG_PROTECTED_DATA="Protected Data";
+	  public static final String SHORT_PROTECTED_DATA="Protected Data";
+	  public static final String PROTECTED_DATA_FILTER="primary_usage";
+	  public static final String LONG_PROTECTION_POLICY="Protection Policy";
+	  public static final String SHORT_PROTECTION_POLICY="Protection Policy";
+	  public static final String PROTECTION_POLICY_FILTER="policy";
+	  public static final String LONG_DEDUPE_SAVINGS="Dedupe Savings";
+	  public static final String SHORT_DEDUPE_SAVINGS="Dedupe Savings";
+	  public static final String DEDUPE_SAVINGS_FILTER="occupied_space";
+	  public static final String LONG_STATUS="Status";
+	  public static final String SHORT_STATUS="Status";
+	  public static final String STATUS_FILTER="status";
+}

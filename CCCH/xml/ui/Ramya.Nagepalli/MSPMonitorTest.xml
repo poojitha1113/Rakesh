@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UserTestSuite">
+<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+<parameter name="port" value="8080" />
+<parameter name="csrAdminUserName"
+	value="xiang_csr@arcserve.com" />
+<parameter name="csrAdminPassword" value="Caworld_2017" />
+<parameter name="uiBaseURI" value="https://tcc.arcserve.com" />
+
+<parameter name="browserType" value="chrome" />
+<parameter name="maxWaitTimeSec" value="10" />
+
+<parameter name="logFolder" value="F:\UILogs" />
+<parameter name="buildVersion" value="SPOGv1" />
+<test name="User Test">
+
+	<classes>
+		<class name="ui.monitor.mspOrgMonitorTest">
+			<methods>
+				<include name="TestAlerts"></include>
+			</methods>
+		</class>
+
+	</classes>
+</test>
+</suite>

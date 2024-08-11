@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Chandra_NO_Volumes_AFT_Suite2" > <!-- 18 -->
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	
+	<parameter name="csrAdminUserName" value="Chandra_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName" value="Chandra_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2020" />
+	
+	<parameter name="logFolder" value="E:\Automation_Logs" />
+	<parameter name="runningMachine" value="CHAKAN-LAPW10.ARCSERVE.COM" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	
+	<parameter name="summaryFilePath" value="E:\Automation_Logs\NO_Volumes_AFT_Suite2_SummaryReport.html"></parameter>
+	<parameter name="mailRecipients" value="ChandraKanth.Kanamarlapudi@arcserve.com;Prasad.Deverakonda@Arcserve.com;rakesh.chalamala@arcserve.com"></parameter>
+	<parameter name="enroll" value="false"></parameter>
+	
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	
+ <test name="Suite2 Test1" ><!-- 16 -->
+		<classes>
+			<class name="api.sources.ConvertToAgentLessTest"></class>
+			<class name="api.dashboard.GetTopCustomersTest"></class>
+	 		<class name="api.dashboard.GetDashboardAccountSummaryTest"></class>
+			<class name="api.organizations.DeleteOrganizationsCacheResourcesById"></class>
+	 		<class name="api.hypervisor.GetVMSForSpecifiedHypervisor"></class>
+	 		<class name="api.hypervisor.AddVMSForSpecifiedHypervisor"></class>
+	 		<class name="api.hypervisor.RefreshVMSForSpecifiedHypervisor"></class>
+	 		<class name="api.logs.GetLogs"></class>
+	 		<class name="api.sources.GetLogsBySourceId"></class>
+	 		<class name="api.jobs.GetJobsTest"></class> 	 		
+	 		<class name="api.reports.reportlistfilters.GetReportListFiltersforLoggedInUser" />
+	 		<class name="api.reports.reportlistfilters.CreateReportListFiltersforSpecifiedUserTest" />
+            <class name="api.reports.reportlistfilters.UpdateReportListFiltersByFilterIDForLoggedInUser" />
+            <class name="api.sources.GetSourcesbyTypesTest" />
+            <class name="api.sources.UpdateSourcebySourceIDTest" />
+			<class name="api.reports.reportschedules.GetReportScheduleTest"/>
+	 	</classes>
+	 </test> 
+	 
+	 
+	 <test name="Li Yin BQs"> <!-- 2 -->
+         <classes>
+             <class name="api.users.sourcefilters.GetSourceSystemFilterTest" />
+             <class name="api.users.destinationfilters.GetDestinationSystemFiltersTest" />
+         </classes>
+     </test>
+</suite> 

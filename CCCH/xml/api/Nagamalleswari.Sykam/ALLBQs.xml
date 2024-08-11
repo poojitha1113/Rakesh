@@ -1,0 +1,86 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Malleswari_Suite">
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="csrReadOnlyAdminName" value="eswari.sykam102@gmail.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2013" />
+	<parameter name="logFolder" value="F:\logs" />
+	<parameter name="runningMachine" value="Malleswari" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="summaryFilePath" value="C:\API_Automation_Logs\summaryfile.html"></parameter>
+	<parameter name="mailRecipients" value="nagamalleswari.sykam@arcserve.com"></parameter>
+
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+
+	<test name="User Test">
+		<classes>
+
+
+		<class name="api.branding.TurnoffBranding" />
+			<class name="api.branding.TurnonBranding" />
+			<class name="api.branding.TurnOffBrandingEmailer" />
+			<class name="api.branding.TurnOnBrandingEmailer" />
+			<class name="api.branding.CreateBrandingTest" />
+			<class name="api.branding.CreateBrandingEmailerTest" />
+			<class name="api.branding.UpdateBrandingTest" />
+			<class name="api.branding.UpdateBrandingEmailerTest" />
+			<class name="api.branding.GetBrandingEmailerTest" />
+			<class name="api.branding.GetBrandingTest" />
+
+			<class name="api.users.logs.columns.CreatelogsColumnsforloggedinuserTest" />
+			<class name="api.users.logs.columns.CreatelogsColumnsforSpecifiedUserTest" />
+			<class name="api.users.logs.columns.DeletelogsColumnsforloggedinUserTest" />
+			<class name="api.users.logs.columns.DeletelogsColumnsforSpecifiedUserTest" />
+			<class name="api.users.logs.columns.updatelogColumnsforloggedinUserTest" />
+			<class name="api.users.logs.columns.updatelogColumnsforspecifiedUserTest" />
+			<class name="api.users.logs.columns.GetlogColumnsforLoggedInUserTest" />
+			<class name="api.users.logs.columns.GetlogColumnsforspecifiedUserTest" />
+
+			<class name="api.users.logsfilters.getSystemLogFiltersTest" />
+			<class name="api.users.userfilters.GetSystemUserFilters" />
+			<class name="api.sources.groups.RemovesourcefromsourcegroupTest" />
+			<class name="api.sources.groups.AddsourcetosourcegroupTest" />
+			<class name="api.getLoggedInUserByIdTest" />
+			<class name="api.users.search.PostUsersSearchTest" />
+			<class name="api.branding.UploadLoginimageFororganizationTest" />
+			<class name="api.branding.UploadLogoFororganizationTest" />
+			<class name="api.users.userfilters.GetUserFiltersForSpecificUserTest" />
+			<class name="api.users.userfilters.GetSpecifiedUserFilterForSpecifiedUserTest" />
+			<class name="api.users.userfilters.GetUserFiltersForloggedInUserTest" />
+			<class name="api.users.userfilters.GetSpecifiedUserFilterForLoggedInUserTest" />
+			
+
+			
+
+
+		
+			<class name="api.users.logsfilters.GetspecifiedLogFilterForLoggedInUserTest" />
+			<class name="api.users.logsfilters.GetLogFiltersForspecifiedUserTest" />
+			<class	name="api.users.logsfilters.GetspecifiedlogfilterbyspecifieduserIDTest" />
+			<class name="api.users.logsfilters.GetLogFiltersForLogginUser" />
+			
+			<class name="api.subscription.ActivatesubscriptionLicenseFortheOraganziationTest" />
+			<class name="api.backupjobreports.GetBackupJobReportsStatusSummaryTest" />
+			<class name="api.backupjobreports.GetBackupJobReportTopsourcesOfLoggedinuserTest" />
+			<class name="api.restorejobreports.GetRestoreJobReportTopSourcesOfLoggedInUserTest" />
+			<class name="api.restorejobreports.GetRestoreJobReportsDetailsTest" />
+			<class name="api.backupjobreports.GetBackupJobReportsDetailsTest" />
+			<class name="api.restorejobreports.GetRestoreJobReportsStatusSummaryTest" />
+			<class name="api.organizations.PostOrganizationInfoBySearchStringTest" />
+
+			<!-- <methods> <include name="TurnoffBrandingFororganization_403"> </include> 
+				</methods> </class> -->
+		</classes>
+	</test>
+
+
+</suite>

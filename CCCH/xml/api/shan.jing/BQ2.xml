@@ -1,0 +1,137 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="CISuite">
+
+	<parameter name= "baseURI" value= "http://tspog.zetta.net"/>
+	<parameter name= "port" value= "8080"/>
+	<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "baseURI" value= "http://10.57.45.19"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "baseURI" value= "http://tspog.zetta.net"/>
+	<parameter name= "port" value= "8080"/>
+
+	<parameter name= "csrAdminUserName" value= "tmp_xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+	<parameter name= "logFolder" value= "C:\Workspace\CCCH_Automation\extent-report"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+	<parameter name= "runningMachine" value= "shaji02-lbq1"/>
+	
+	<parameter name= "baseURI" value= "http://tccapi.arcserve.com"/>
+	<parameter name= "port" value= "8080"/>
+	<parameter name= "csrAdminUserName" value= "shaji02_csr_0926_2@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Welcome*02"/>
+	<parameter name= "pmfKey" value= "shaji02"/>
+	
+	<test name="Organization Test" preserve-order="true">
+		
+		<classes> 
+		 
+		
+		<class name="api.policies.CreatePolicy4ReplicateTest" /> 		 
+		 <class name="api.policies.CreatePolicy4DRTest" />
+		 <class name="api.policies.CreatePolicyTest" />
+		 <class name="api.policies.EnhancePolicyStatusTest" />	
+		 <class name="api.policies.ResourceMultitenancyTest" /> 
+		 <class name="api.policies.remotePoliciesTest" />
+		 <class name="api.policies.GetPoliciesByTypeUnderSourceTest" />
+		 <class name="api.policies.PostPoliciesByTypeUnderSourcesTest" /> 	 
+		 <class name="api.policies.Action4SourceTest" /> 
+		 <class name="api.policies.sources.UnassignPolicyTest" />
+		 <class name="api.policies.sources.AssignPolicyTest" />	
+		 <class name="api.organizations.policies.types.sources.GetPolicySourcesByTypeTest" />
+		 <class name="api.sources.RemoveSourceTest" />
+	
+		 <!-- 
+		 
+        <class name="api.policies.CreatePolicy4ReplicateTest" /> 		 
+		 <class name="api.policies.CreatePolicy4DRTest" />
+		 <class name="api.policies.CreatePolicyTest" />
+		 <class name="api.policies.EnhancePolicyStatusTest" />	
+		 <class name="api.policies.ResourceMultitenancyTest" /> 
+		 <class name="api.policies.remotePoliciesTest" />
+		 <class name="api.policies.GetPoliciesByTypeUnderSourceTest" />
+		 <class name="api.policies.PostPoliciesByTypeUnderSourcesTest" /> 	 
+		 <class name="api.policies.Action4SourceTest" /> 
+		 <class name="api.policies.sources.UnassignPolicyTest" />
+		 <class name="api.policies.sources.AssignPolicyTest" />	
+		 <class name="api.organizations.policies.types.sources.GetPolicySourcesByTypeTest" />
+		 <class name="api.sources.RemoveSourceTest" />
+		 
+        
+        
+		 
+		  <class name="api.organizations.CreateAccountTest" />	
+        <class name="api.users.sourcefilters.EnhanceCreateSourceFilterTest" />
+        <class name="api.users.sourcefilters.EnhanceUpdateSourceFilterTest" />
+        <class name="api.GetLoggedInUserOrganizationTest" />
+        <class name="api.users.sourcefilters.CreateSourceFilterTest" />
+        <class name="api.users.logsfilters.EnhanceCreateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.EnhanceCreateLogFilterTest" />
+		 <class name="api.users.logsfilters.EnhanceUpdateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.EnhanceUpdateLogFilterTest" />
+		 <class name="api.users.sourcefilters.CreateDefaultSourceFilterTest" />
+		 <class name="api.policies.CreatePolicyTest" />
+		 <class name="api.policies.EnhancePolicyStatusTest" />	
+		 <class name="api.policies.ResourceMultitenancyTest" /> 
+		 <class name="api.policies.Action4SourceTest" /> 
+		 <class name="api.sources.RemoveSourceTest" />
+		 <class name="api.organizations.policies.types.sources.GetPolicySourcesByTypeTest" />
+		 
+		 
+		 
+        <class name="api.destination.GetDestinationColumnsTest" />
+		 <class name="api.sources.GetSourceColumnsTest" />	
+		 <class name="api.logs.GetLogColumnsTest" />
+		 <class name="api.jobs.GetJobColumnsTest" />		 
+		 <class name="api.users.sourcefilters.CreateSourceFilterTest" />
+		 <class name="api.users.sourcefilters.UpdateSourceFilterTest" />
+		 <class name="api.users.sourcefilters.CreateDefaultSourceFilterTest" />
+		 <class name="api.users.sourcefilters.EnhanceUpdateSourceFilterTest" />
+		 <class name="api.users.sourcefilters.EnhanceCreateSourceFilterTest" />
+		 <class name="api.organizations.CreateOrganizationTest" />
+		 <class name="api.organizations.EnhanceCreateOrganizationTest" />
+		 <class name="api.organizations.GetOrganizationInfoTest" />
+		 <class name="api.GetLoggedInUserOrganizationTest" />
+		 <class name="api.organizations.DeleteOrganizationTest" />	
+		 <class name="api.organizations.CreateAccountTest" />		 
+		 <class name="api.organizations.UpdateAccountTest" />
+		 <class name="api.organizations.DeleteAccountTest" />
+		 <class name="api.organizations.DeleteAccountsTest" />
+		 <class name="api.users.logsfilters.UpdateLogFilterTest" />
+		 <class name="api.users.logsfilters.CreateLogFilterTest" />
+		 <class name="api.users.logsfilters.UpdateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.CreateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.EnhanceCreateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.EnhanceCreateLogFilterTest" />
+		 <class name="api.users.logsfilters.EnhanceUpdateLogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.EnhanceUpdateLogFilterTest" />
+         <class name="api.policies.CreatePolicy4ReplicateTest" />
+ 		 <class name="api.version.GetVersionTest" />
+		 <class name="api.policies.CreatePolicy4DRTest" />
+		 <class name="api.policies.CreatePolicyTest" />
+		 <class name="api.policies.EnhancePolicyStatusTest" />	
+		 <class name="api.policies.ResourceMultitenancyTest" /> youwenti
+		 <class name="api.policies.remotePoliciesTest" />
+		 <class name="api.policies.GetPoliciesByTypeUnderSourceTest" />
+		 <class name="api.policies.PostPoliciesByTypeUnderSourcesTest" />
+		 <class name="api.organizations.freetrial.GetFreetrailCloudhybridTest" />
+		 <class name="api.organizations.freetrial.GetFreetrialClouddirectTest" />
+		 <class name="api.organizations.freetrial.PostFreetrialClouddirectTest" />
+		 <class name="api.organizations.freetrial.PostFreetrailCloudhybridTest" />
+		 <class name="api.organizations.accounts.UpdateAccountThresholdTest" />		 	 
+		 <class name="api.policies.Action4SourceTest" /> 
+		 <class name="api.policies.sources.UnassignPolicyTest" />
+		 <class name="api.policies.sources.AssignPolicyTest" />	
+		 <class name="api.organizations.policies.types.sources.GetPolicySourcesByTypeTest" />
+		 <class name="api.sources.RemoveSourceTest" />
+		 <class name="api.logs.CreateLogsTest" />		 
+		 <class name="api.logs.CreateLogInbulkTest" />
+		 <class name="api.logs.GetGeneratedFroms4LogTest" />
+		 <class name="api.logs.EnhanceCreateLogTest" />
+		 -->
+		 
+		</classes>
+	 </test>
+	 
+</suite>

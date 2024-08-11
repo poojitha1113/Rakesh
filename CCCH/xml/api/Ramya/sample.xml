@@ -1,0 +1,163 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SiteManagmentTestSuite">
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName"
+		value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="csrReadOnlyUserName"
+		value="SPOG_QA_RAMYA_BQ_csr_read_only@arcserve.com" />
+	<parameter name="csrReadOnlyPassword" value="Mclaren@2020" />
+	<parameter name="logFolder" value="F:\logs" />
+	<parameter name="runningMachine" value="RamyaAgent2012" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<test name="User Test">
+		<classes>
+			
+			<class name="api.audittrail.getAuditTrailCodesByCSRTest" />
+
+			<class
+				name="api.organization.support.getOrganizationSupportTest" />
+			<class
+				name="api.organization.support.getOrganizationSupportForSpecifiedOrganizationTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.getSystemRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.getloggedInUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.getloggedInUserRecoveredResourcesFilterByFilterIdTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.getSpecifiedUserRecoveredResourcesFilterByFilterIdTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.getSpecifiedUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.deleteloggedInUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.deleteSpecifiedUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.updateloggedInUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.updateSpecifiedUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.createloggedInUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.users.recoveredresourcesfilters.createSpecifiedUserRecoveredResourcesFiltersTest" />
+			<class
+				name="api.backupjobreports.columns.postBackUpJobReportsColumnsforLoggedInUserTest" />
+			<class
+				name="api.backupjobreports.columns.postBackUpJobReportsColumnsforSpecifiedUserTest" />
+			<class
+				name="api.backupjobreports.columns.updateBackUpJobReportsColumnsforLoggedInUserTest" />
+			<class
+				name="api.backupjobreports.columns.updateBackUpJobReportsColumnsforSpecifiedUserTest" />
+			<class
+				name="api.backupjobreports.columns.getBackUpJobReportsColumnsforLoggedInUserTest" />
+			<class
+				name="api.backupjobreports.columns.getBackUpJobReportsColumnsforSpecifiedUserTest" />
+			<class
+				name="api.backupjobreports.columns.getSystemBackUpJobReportsColumnsTest" />
+			<class
+				name="api.backupjobreports.columns.deleteBackUpJobReportsColumnsforLoggedInUserTest" />
+			<class
+				name="api.backupjobreports.columns.deleteBackUpJobReportsColumnsforSpecifiedUserTest" />
+
+			<class
+				name="api.users.usercolumns.DeleteUserColumnsForLoggedInUserTest" />
+
+			<class
+				name="api.users.usercolumns.DeleteUserColumnsByUserIdTest" />
+
+			<class
+				name="api.users.jobfilters.GetJobFilterbyFilterIdLoggedUserTest" />
+
+			<class
+				name="api.users.jobfilters.GetJobFiltersForLoggedUserTest" />
+
+			<class
+				name="api.users.jobfilters.GetJobFiltersForSpecifiedUserTest" />
+			<class
+				name="api.users.jobfilters.GetspecifiedjobfilterforspecifieduseridTest" />
+
+			<class name="api.destination.updateDestinationUsageByIdTest" />
+
+			<class name="api.logs.GetOrganizationsIdLogs" />
+
+			<class name="api.destination.GetDestinations" />
+
+			<class name="api.organizations.alerts.deleteAlertsByIdTest" />
+
+			<class
+				name="api.organizations.alerts.deleteOrganizationsAlertByIdTest" />
+			<class
+				name="api.organizations.alerts.AcknowledgeAllOrganizationAlertsTest" />
+
+			<class
+				name="api.organizations.alerts.getOrganizationsAlertByIdTest" />
+
+			<class
+				name="api.organizations.alerts.getOrganizationsAlertTest" />
+
+			<class
+				name="api.organizations.alerts.postOrganizationsAlertTest" />
+
+			<class
+				name="api.organizations.alerts.updateOrganizationsAlertTest" />
+
+			<class name="api.dashboard.getBackupJobStatusSummaryTest" />
+
+			<class name="api.dashboard.getDashboardPolicySummaryTest" />
+
+			<class name="api.dashboard.getDashboardSourceSummaryTest" />
+
+			<class name="api.dashboard.getDashboardTopPoliciesTest" />
+
+			<class name="api.dashboard.getDashboardTopSourcesTest" />
+
+			<class
+				name="api.destination.DeletedestinationbydestinationIdTest" />
+
+			<class name="api.audittrail.GetAuditTrailbyOrgIdTest" />
+
+			<class name="api.audittrail.GetAuditTrailByUserTest" />
+
+			<class name="api.capacityusage.getCapacityUsageReportsDetails" />
+
+			<class
+				name="api.capacityusage.getCloudHybridCapacityUsageDetails" />
+
+			<class
+				name="api.capacityusage.getCloudHybridDedupeUsageDetails" />
+
+			<class
+				name="api.organizations.alerts.getAlertsForLoggedInUserTest" />
+			<class
+				name="api.organizations.alerts.generateOrganizationCapacityAlertTest" />
+			<class
+				name="api.dashboard.widgets.postDashboardWidgetsForLoggedInUserTest" />
+
+			<class
+				name="api.dashboard.widgets.getSystemDashboardWidgetsTest" />
+			<class
+				name="api.dashboard.widgets.deleteDashboardWidgetsForLoggedInUserTest" />
+			<class
+				name="api.dashboard.widgets.postDashboardWidgetsForSpecifiedUserTest" />
+			<class
+				name="api.dashboard.widgets.deleteDashboardWidgetsForSpecifiedUserTest" />
+			<class
+				name="api.dashboard.widgets.getDashboardWidgetsForSpecifiedUserTest" />
+
+			<class
+				name="api.dashboard.widgets.getDashboardWidgetsForLoggedInUserTest" />
+
+			<class
+				name="api.dashboard.widgets.putDashboardWidgetsForLoggedInUserTest" />
+			<class
+				name="api.dashboard.widgets.putDashboardWidgetsForSpecifiedUserTest" />
+
+			<class
+				name="api.organizations.freetrail.PostCloudHybridTrailRequestTest" />
+
+			<class name="api.userSaveSearchTest"></class>
+		</classes>
+	</test>
+</suite>

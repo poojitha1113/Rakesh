@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="false">
+	<parameter name="baseURI" value="http://tspog.zetta.net" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="tmp_xiang.li@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="logFolder" value="E:\workspace\CCCH_Automation\extentReport" />
+	<parameter name="buildVersion" value="SPOGv1"></parameter>
+	<test name="getPoliciesRelated">
+		<classes>		
+			<class name="api.destination.GetDatacenterTest" />					
+			<class name="api.policies.GetPoliciesBackuptypesTest" />	
+			<class name="api.policies.GetPolicyTypesTest" />	
+			<class name="api.organizations.GetAmountAndPolicyTypeForSpecifiedOrganizationTest" />	
+			<class name="api.policies.GetPoliciesAmountTest"/> 					
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

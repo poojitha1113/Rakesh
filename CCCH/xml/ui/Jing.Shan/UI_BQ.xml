@@ -1,0 +1,173 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UserTestSuite" >
+
+<parameter name= "baseURI" value= "http://tccapi.arcserve.com"/>
+	  <parameter name= "port" value= "8080"/>
+<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+     <parameter name= "uiBaseURI" value= "https://tcc.arcserve.com"/> 
+	
+	<parameter name= "browserType" value= "chrome"/>
+	<parameter name= "maxWaitTimeSec" value= "10"/>
+    
+	<parameter name= "logFolder" value= "C:\Workspace\extentReport3"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+	<parameter name="csrAdminUserName" value="shaji02_csr_0926_3@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Welcome*02"/>
+	
+	<test name="User Test" >
+
+ 		<classes> 
+ 		<class name="UI_Integrate.E2EAccountLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EDirectLinuxAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EDirectAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" /> 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		 		 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		
+ 				
+ 		
+ 		
+ 		<!-- 
+ 		<class name="UI_Integrate.E2EAccountLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EDirectLinuxAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EDirectAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" /> 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		 		 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		<class name="UI_Integrate.E2EAccountLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EDirectLinuxAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EDirectAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" /> 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		
+ 		 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		<class name="UI_Integrate.E2EDirectLinuxAgent" /> 		
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />
+ 		
+ 		
+ 		
+ 		<class name="UI_Integrate.E2EAccountLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminLinuxAgent" />
+ 		<class name="UI_Integrate.E2EDirectLinuxAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		
+ 		 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" />  
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" /> 
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" /> d
+ 		<class name="UI_Integrate.E2EDirectAgent" />   d
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />  d
+ 		
+ 		<class name="UI_Integrate.E2EDirectAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectImgWinAgent" />
+ 		
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountImgWinAgent" />   failed
+ 		
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />  failed
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" /> failed
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 
+ 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminImgWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminImgWinAgent" />
+ 		
+ 		
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminDRWinAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EDirectDRWinAgent" />
+ 		<class name="UI_Integrate.E2EDirectAgent" />
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		<class name="UI_Integrate.E2EAccountAgent" />
+ 		<class name="UI_Integrate.E2EMspAdminAgent" /> 		
+ 		<class name="UI_Integrate.E2EMspAccountAdminWinAgent" />
+ 		 -->
+ 		
+		</classes>
+	 </test>
+</suite>

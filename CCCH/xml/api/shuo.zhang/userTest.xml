@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UserTestSuite" >
+
+ 	<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/> 
+	<parameter name= "csrAdminUserName" value= "xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+	<!-- 
+	<parameter name= "baseURI" value= "http://wanhu08-w12r2"/>
+	<parameter name= "port" value= "9080"/>
+  -->
+	
+	<parameter name= "logFolder" value= "E:\workspace\CCCH_Automation\extentReport"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+		<parameter name= "browserType" value= "chrome"/>
+	<parameter name= "maxWaitTimeSec" value= "10"/>
+	<test name="User Test" >
+	
+ 		<classes> 
+	 	 
+		<!-- 
+		 
+			
+		<class name="api.CreateUserTest" />
+		     		 <class name="api.GetUsersTest" />
+		   <class name="api.users.LoginTest" />	
+		   		<class name="api.sources.CreateSourceTest" />
+		   <class name="api.sources.GetSourcesTest" />  
+		  	<class name="api.users.sources.columns.CreateUsersSourcesColumnsTest" />
+		   			<class name="api.users.sources.columns.UpdateUsersSourcesColumnsTest" />
+		   				<class name="api.users.sources.columns.DeleteUsersSourcesColumnsTest" />
+		   				<class name="api.users.sources.columns.DeleteLoggedInUserSourcesColumnsTest" />
+		   				<class name="api.users.sources.columns.UpdateLoggedInUserSourcesColumnsTest" />
+		   					<class name="api.users.sources.columns.GetLoggedInUserSourcesColumnsTest" />
+			 <class name="api.organizations.accounts.DeleteAccountPictureTest" />
+			     	<class name="api.sources.GetSourcesTest" />  
+			     		 	<class name="api.policy.GetPolicyColumnsTest" />
+				<class name="api.users.policy.DeleteUsersPolicyColumnTest" />  -->
+		<class name="api.users.AssignAccountsTest" /> 
+				 
+		</classes>
+	 </test>
+</suite>

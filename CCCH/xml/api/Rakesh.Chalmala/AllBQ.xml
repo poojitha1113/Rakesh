@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" >
+	<parameter name= "baseURI" value= "https://tccapi.arcserve.com"/>
+    <parameter name= "port" value= "8443"/>
+    <parameter name= "csrAdminUserName" value= "rakesh_csr@arcserve.com"/>
+    <parameter name= "csrAdminPassword" value= "Mclaren@2020"/> 
+    <parameter name="csrReadOnlyUser" value="rakesh_csr_readonly@arcserve.com"/>
+    <!--<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "csrAdminUserName" value= "xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/> -->
+	<parameter name= "logFolder" value= "C:\workspace\CCCH_Automation\logE1"/>
+	<parameter name="summaryFilePath" value="C:\UI_Automation_Logs\BQ1.html"></parameter>
+	<parameter name="mailRecipients" value="rakesh.chalamala@arcserve.com;ramya.nagepalli@arcserve.com"></parameter>
+	<parameter name= "runningMachine" value= "RAKCHA-PCW10"/>
+	<parameter name="buildVersion" value= "SPOGv1"/>
+	
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	<test name="User Test" >
+	
+	
+		<classes> 
+		<class name="api.users.GetUserColumnsTest"></class>
+	 	<class name="api.users.usercolumns.CreateUserColumnsByUserIdTest"></class>
+	 	<class name="api.users.usercolumns.CreateUserColumnsForLoggedInUserTest"></class>	
+	 	<class name="api.users.usercolumns.UpdateUserColumnsByUserIdTest"></class> 
+	 	<class name="api.users.usercolumns.UpdateUserColumnsForLoggedInUserTest"></class>
+	 	<class name="api.users.userfilters.DeleteUserFilterForSpecifiedUserTest"/>
+	 	<class name="api.users.userfilters.DeleteUserFilterForLoggedInUserTest"/> 
+	 	<class name="api.users.destination.columns.DeleteDestinationColumnbyUserIDTest"></class>
+	 	<class name="api.users.destination.columns.DeleteDestinationColumnforLoggedInUserTest"></class>
+	 	<class name="api.users.destination.columns.GetDestinationColumnByUserIdTest"></class>  
+	 	<class name="api.users.destination.columns.GetDestinationColumsForLoggedinUserTest"></class> 
+	 	<class name="api.users.destination.columns.CreateDestinationColumnsByUserIdTest"></class> 
+	 	<class name="api.users.destination.columns.CreateDestinationColumnsForLoggedInUserTest"></class> 
+	 	<class name="api.users.destination.columns.UpdateDestinationColumnsByUserIdTest"></class> 
+	 	<class name="api.users.destination.columns.UpdateDestinationColumnsForLoggedInUserTest"></class>
+	 	<class name="api.users.recoveredresource.columns.CreateRecoveredResourceColumnsByUserIdTest"/>
+	 	<class name="api.users.recoveredresource.columns.CreateRecoveredResourceColumnsForLoggedInUserTest"/>
+	 	<class name="api.users.recoveredresource.columns.DeleteRecoveredResourceColumnsByUserIdTest"/> 
+	 	<class name="api.users.recoveredresource.columns.DeleteRecoveredResourceColumnsForLoggedinUserTest"/> 
+	 	<class name="api.users.recoveredresource.columns.GetRecoveredResourceColumnsByUserIdTest"/>
+	 	<class name="api.users.recoveredresource.columns.GetRecoveredResourceColumnsForLoggedInUserTest"/>
+	 	<class name="api.users.recoveredresource.columns.GetRecoveredResourceColumnsTest"/> 
+	 	<class name="api.users.recoveredresource.columns.UpdateRecoveredResourceColumnsByUserIdTest"/>
+	 	<class name="api.users.recoveredresource.columns.UpdateRecoveredResourceColumnsForLoggedInUserTest"/>
+	 	<class name="api.restorejobreports.columns.CreateRestoreJobReportsColumnsForLoggedInUserTest"></class> 
+	 	<class name="api.restorejobreports.columns.CreateRestoreJobReportsColumnsForSpecifiedUserTest"></class>
+	 	<class name="api.restorejobreports.columns.DeleteRestoreJobReportsColumnsForLoggedInUserTest"></class>
+	 	<class name="api.restorejobreports.columns.DeleteRestoreJobReportsColumnsForSpecifiedUserTest"></class>
+	 	<class name="api.restorejobreports.columns.GetRestoreJobReportsColumnsForLoggedInUserTest"></class> 
+	 	<class name="api.restorejobreports.columns.GetRestoreJobReportsColumnsForSpecifiedUserTest"></class>
+	 	<class name="api.restorejobreports.columns.GetSystemRestoreJobReportsColumnsTest"></class>
+	 	<class name="api.restorejobreports.columns.UpdateRestoreJobReportsColumnsForLoggedInUserTest"></class>
+	 	<class name="api.restorejobreports.columns.UpdateRestoreJobReportsColumnsForSpecifiedUserTest"></class>
+	 	<class name="api.reports.reportschedules.CreateReportScheduleTest"/>
+		<class name="api.reports.reportschedules.DeleteReportScheduleTest"/>
+		<class name="api.reports.reportschedules.DeleteReportsByScheduleIdTest"/>
+	 	<class name="api.reports.reportschedules.UpdateReportScheduleTest"/>
+	 	<class name="api.reports.reportschedules.DeleteReportByIdTest"></class>
+	 	<class name="api.reports.reportschedules.DeleteReportsTest"></class>
+	 	<class name="api.reports.reportschedules.GenerateReportNowTest"/>
+	 	<class name="api.reports.reportschedules.GetReportsTest"></class>
+	 	<class name="api.dashboard.GetTopCustomersTest"></class>
+	 	<class name="api.dashboard.GetDashboardAccountSummaryTest"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesTest"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdTrial"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChTrial"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdNearCapacity"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdOverCapacity"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChNearCapacity"></class> 
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChOverCapacity"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExemption"></class>
+	 	<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExpiration"></class>
+	 	<class name="api.reports.reportschedules.GetReportScheduleTest"/>  
+	 	<class name="api.hypervisor.GetHypervisorsTest"></class>
+	 	<class name="api.hypervisor.GetHypervisorByIdTest" />
+	 	<class name="api.hypervisor.GetVMSForSpecifiedHypervisor"></class>
+	 	<class name="api.hypervisor.AddVMSForSpecifiedHypervisor"></class> 
+	 	<class name="api.hypervisor.RefreshVMSForSpecifiedHypervisor"></class>
+	 	<class name="api.hypervisor.GetHypervisorsAmount"></class>
+	 	<class name="api.destination.GetDestinationsById"></class>
+	 	<class name="api.destination.GetDestinationUsageByDestinationId"></class>  
+	 	<class name="api.sources.GetSourcesForSpecifiedPolicyTest"></class>  
+	 	
+	 
+	 	
+	 	</classes>
+	 </test>
+</suite> 

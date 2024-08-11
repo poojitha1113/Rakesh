@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CISuite" >
+	<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "csrAdminUserName" value= "xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+	<parameter name= "logFolder" value= "C:\Workspace\CCCH_Automation\extent-report\"/>
+	<parameter name= "runningMachine" value= "mabzh02-win10"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+	
+	<test name="CI Test" preserve-order="false">
+		<classes> 
+		 <class name="api.users.filter.GetFiltersFromSpecificUserTest" />
+		 <class name="api.organizations.GetUsersFromOrganizationAdvTest"/>
+		 <class name="api.organizations.GetUsersFromOrganizationTest"/>	 
+		 <class name="api.organizations.UpdateLoggedInOrganizationTest" />
+		 <class name="api.organizations.UpdateOrganizationByIDTest" />
+		 <class name="api.userroles.GetUserrolesTest" />
+		 <class name="api.users.filter.GetSpecificFilterFromSpecificUserTest" />
+		</classes>
+	 </test>
+</suite>

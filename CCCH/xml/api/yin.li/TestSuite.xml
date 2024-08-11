@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CreateCloudDirectDestinations" configfailurepolicy="continue">
+	<!-- <listeners> <listener class-name="org.uncommons.reportng.HTMLReporter" 
+		/> <listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> </listeners> -->
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="runningMachine" value="yourMachineHostname" />
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+
+	<parameter name="logFolder" value="C:\workspace\CCCH_Automation\extent-report\" />
+	<test name="CreateCloudDirectDestinations">
+		<classes>
+
+			<class name="test.restapi.site.TestCreateSite">
+				<!-- <methods> <include name="Given_Csr_ReadOnly_User_When_CreateSite_Should_Failed" 
+					/> </methods> -->
+			</class>
+			<class name="test.restapi.site.TestDeleteSite">				
+			</class>
+			<class name="api.cloudaccounts.AgentDownloadForCloudDirectTest" />
+			<class name="api.cloudaccounts.CreateCloudDirectDestinations" />
+			<class name="api.sources.groups.GetAllGroupsTest" />
+			<class
+				name="api.users.destinationfilters.GetDestinationFiltersByUserIdTest" />
+			<class name="api.users.destinationfilters.GetDestinationSystemFiltersTest" />
+			<class name="api.sources.groups.GetGroupByName" />
+			<class name="api.organizations.GetOrganizationIdJobsTest" />
+			<class name="api.policies.GetPoliciesEnhancementForRplcatRemoteRpsTest" />
+			<class name="api.policies.GetPoliciesOfLoggedUsersOrganization" />
+			<class name="api.policies.GetSharedPoliciesTest" />
+			<class name="test.restapi.site.TestGetSiteById" />
+			<class name="test.restapi.site.TestGetSites" />
+			<class name="api.users.filter.GetSourceFilterForLoggedUserTest" />
+			<class name="api.users.sourcefilters.GetSourceSystemFilterTest" />
+			<class
+				name="api.users.sourcefilters.GetSpecificSourceFilterForLoggedUserTest" />
+			<class
+				name="api.users.destinationfilters.UpdateDestinationFilterForLoggedInUserTest" />
+			<class name="api.users.destinationfilters.UpdateDestinationFilterTest" />
+			<class name="api.jobs.UpdateJobDataTest" />
+			<class name="api.jobs.UpdateJobTest" />
+			<class name="api.sources.groups.UpdateSourceGroupTest" />
+			<class name="ui.user.UserProfileUITest" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Malleswari_Suite_AUTO">
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="eswari_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName" value="eswari.sykam102@gmail.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2013" />
+	<parameter name="logFolder" value="F:\logs" />
+	<parameter name="runningMachine" value="bharadwaj" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="summaryFilePath" value="C:\API_Automation_Logs\summaryfile.html"></parameter>
+	<parameter name="mailRecipients" value="nagamalleswari.sykam@arcserve.com"></parameter>
+
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+
+	<test name="User Test">
+		<classes>
+
+			<class name="api.columns.CreateColumnsTest" />
+			<class name="api.columns.DeleteColumnTest" />
+			<class name="api.columns.UpdateColumnsTest" />
+			<class name="api.columns.GetColumnsTest" />
+		<!-- <methods> <include name="createCloumswithInvalid_Order_Ids"> </include> 
+				</methods> </class> -->
+			<!-- <methods> <include name="TurnoffBrandingFororganization_403"> </include> 
+				</methods> </class> -->
+		</classes>
+	</test>
+
+
+</suite>

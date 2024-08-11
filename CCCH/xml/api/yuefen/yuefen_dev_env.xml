@@ -1,0 +1,62 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CISuite" >
+
+<parameter name= "baseURI" value= "http://tspog.zetta.net"/>
+      <parameter name= "port" value= "8080"/>
+      <parameter name= "csrAdminUserName" value= "tmp_xiang.li@arcserve.com"/>
+      <parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+
+	<parameter name= "logFolder" value= "C:\Workspace\CCCH_Automation\extent-report\"/>
+	
+	<parameter name= "organizationName" value= "ci_org11"/>
+	<parameter name= "organizationType" value= "direct"/>
+	<parameter name= "organizationEmail" value= "a1sbutest@arcserve.com"/>
+	<parameter name= "organizationPwd" value= "1welcome*02"/>
+	<parameter name= "organizationFirstName" value= "ci1"/>
+	<parameter name= "organizationLastName" value= "_org1"/>
+	<parameter name= "runningMachine" value= "liuyu05-w10"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+	
+	
+	<test name="CI Test" >
+	
+ 		<classes> 
+ 	<!--
+          <class name="test.restapi.site.TestUpdateSiteById" />	
+		 <class name="test.restapi.site.TestLoginSite" />
+		 <class name="api.users.ChangePasswordForLoggedInUserTest" />	
+		 <class name="api.users.ChangePasswordForSpecifiedUserTest" />	 
+		 <class name="api.UpdateLoggedInUserTest" />
+         <class name="api.users.UpdateUserByIdTest" />	
+         <class name="api.users.DeleteUserByIdTest" />	
+         <class name="api.sources.groups.CreateGroupTest" />
+		 <class name="api.sources.groups.DeleteGroupTest" />
+		 <class name="api.sources.groups.GetSourceListFromOneGroupTest" />
+		  <class name="api.hypervisors.columns.GetDefaultHypervisorColumnsTest" />
+		 <class name="api.hypervisors.columns.CreateHypervisorColumnsForLoggedInUserTest" />
+		 <class name="api.hypervisors.columns.CreateHypervisorColumnsForSpecifiedUserTest" />
+		 <class name="api.hypervisors.columns.DeleteHypervisorColumnsForLoggedInUserTest" />
+		 <class name="api.hypervisors.columns.DeleteHypervisorColumnsForSpecifiedUserTest" />
+		 <class name="api.hypervisors.columns.UpdateHypervisorColumnsForLoggedInUserTest" />
+		 <class name="api.hypervisors.columns.UpdateHypervisorColumnsForSpecifiedUserTest" />
+		 <class name="api.hypervisors.columns.GetHypervisorColumnsForLoggedInUserTest" />
+		 <class name="api.hypervisors.columns.GetHypervisorColumnsForSpecifiedUserTest" />
+         <class name="api.organizations.AssignMspAccountAdminsForMspAccountTest" />
+		 <class name="api.organizations.GetAllMspAccountAdminsForSpecifiedMspAccountTest" />
+		 <class name="api.organizations.UnAssignMspAccountAdminsForMspAccountTest" />
+		 <class name="api.users.assignedaccounts.GetAssignedMspAccountsForSpecifiedUserTest" />
+		 
+		 <class name="api.organization.orders.CreateOrderForLoggedInUserTest" />
+		 <class name="api.organization.orders.CreateOrderForSpecifiedOrgTest" />	
+		 <class name="api.organization.orders.GetOrdersForLoggedInUserTest" />	
+		 <class name="api.organization.orders.GetOrdersForSpecifiedOrgTest" />
+		 <class name="api.organization.orders.GetOrderByIdForLoggedInUserTest" />
+		 <class name="api.organization.orders.GetOrderByIdForSpecifiedOrgTest" />
+		 
+		 <class name="api.organization.orders.CreateDataForUI" />		
+	-->
+	 <class name="api.organization.orders.GetOrderByIdForSpecifiedOrgTest" />
+ 
+		</classes>
+	 </test>
+</suite>

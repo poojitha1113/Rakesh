@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CISuite" >
+	<parameter name= "baseURI1" value= "http://10.61.4.39"/>
+	<parameter name= "baseURI" value= "http://qaspog5.zetta.net"/>
+	<parameter name= "port" value= "8080"/>
+	<parameter name= "csrAdminUserName" value= "ci_xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminUserName" value= "xiang_csr@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+	<parameter name= "logFolder" value= "C:\Workspace\CCCH_Automation\extent-report"/>
+	<parameter name= "buildVersion" value= "CI_SPOGv1"/>
+	<parameter name= "runningMachine" value= "shaji02-lbq1"/>
+	<test name="Organization Test" preserve-order="true">
+		<classes> 
+		 <class name="CI.CIIntegrationTest" />
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 	
+		 <!--  >
+		 <class name="api.organizations.CreateOrganizationTest" />
+		 <class name="api.organizations.GetOrganizationInfoTest" />
+		 <class name="api.organizations.CreateAccountTest" />
+		 <class name="api.userroles.GetUserrolesTest" />
+		 <class name="api.getLoggedInUser" />
+		 <class name="api.getLoggedInUserByIdTest"/>
+		 
+		 
+		 <class name="api.organizations.CreateOrganizationTest" />
+		 <class name="api.organizations.GetOrganizationInfoTest" />
+		 <class name="api.organizations.DeleteOrganizationTest" />
+		 <class name="api.organizations.CreateAccountTest" />
+		 <class name="api.organizations.DeleteAccountTest" />
+		 <class name="api.organizations.UpdateAccountTest" />
+		 <class name="api.users.UpdateUserByIdTest"/>	
+		 <class name="api.userroles.GetUserrolesTest" />
+		 <class name="api.users.DeleteUserByIdTest"/>
+		 <class name="api.UpdateLoggedInUserTest"/> 
+		 <class name="api.getLoggedInUser" />
+		 <class name="api.getLoggedInUserByIdTest"/>
+		 <class name="api.users.LoginTest"/>
+		 <class name="api.GetUsersTest" />
+		 <class name="api.sites.RegisterSiteTest" />
+		 <class name="api.sites.GetsiteconfigurationTest" />
+		 -->
+		 
+		 
+		</classes>
+	 </test>
+	 
+</suite>

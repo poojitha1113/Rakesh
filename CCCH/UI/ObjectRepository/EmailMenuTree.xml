@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MicrosoftEmail>
+<EmailAddress id="i0116"></EmailAddress>
+<Next id="idSIButton9"></Next>
+<Password id="i0118"></Password>
+<SignIn id="idSIButton9"></SignIn>
+<OutlookSignIn xpath="//a[text()='Sign in ']"></OutlookSignIn>
+<!--  <MoreActions xpath="//mee-action-menu[@class='theme-light persona-links ng-scope']/div[1]"  ></MoreActions>-->
+<MoreActions xpath="//button[text()='More actions']"  ></MoreActions>
+
+<ViewInbox xpath="//span[text()=' View inbox ']" ></ViewInbox>
+<MailBox>
+	<Inbox xpath="//span[text()='Inbox']"></Inbox>
+	<SpogEmailTile xpath="//span[text()='Welcome to Arcserve - Enrollment']"></SpogEmailTile>
+	<ActivateAccount xpath="//button[contains(text(),'Create Account')]"></ActivateAccount>
+	<Focused xpath="//div[text()='Focused']"></Focused>
+	<SpogEmailFirstLastName xpath="//p[contains(text(),'Hi')]"></SpogEmailFirstLastName>
+	<SpogEmailOrgName xpath="//p[contains(text(),'Organization')]"></SpogEmailOrgName>
+	<SpogEmailAccountName xpath="//p[contains(text(),'Account Name')]"></SpogEmailAccountName>
+	<SpogEmailAccountCreatedBy xpath="//p[contains(text(),'Account Created By')]"></SpogEmailAccountCreatedBy>
+	
+	
+</MailBox>
+</MicrosoftEmail>

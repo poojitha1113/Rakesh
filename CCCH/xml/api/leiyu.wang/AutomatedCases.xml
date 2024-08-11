@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" >
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="logFolder" value="E:\workspace\CCCH_Automation\extentReport" />
+	<parameter name="buildVersion" value="SPOGv1"></parameter>
+	<test name="APITest">
+		<classes>
+			<class name="api.destination.GetDatacenterTest" />
+ 			<class name="api.destination.PostDestinationTest"/>
+			<class name="api.policies.GetPoliciesBackuptypesTest" />	
+			<class name="api.policies.GetPolicyTypesTest" />	
+			<class name="api.recoveredresources.GetAmountForVSBAndIVMSourceTest" />	
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

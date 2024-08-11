@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CISuite" >
+	<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "csrAdminUserName" value= "xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "caworldcaworld"/>
+	<parameter name= "logFolder" value= "C:\Workspace\CCCH_Automation\extent-report\"/>
+	
+	<test name="CI Test" preserve-order="false">
+		<classes> 
+		 <class name="api.organizations.CreateOrganizationTest" />	
+		 <class name="api.organizations.DeleteOrganizationTest" />	 
+		</classes>
+	 </test>
+</suite>

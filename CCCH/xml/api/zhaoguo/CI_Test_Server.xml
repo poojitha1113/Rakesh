@@ -1,0 +1,97 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CISuite" >
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="logFolder" value="C:\Workspace\CCCH_Automation\extent-report\" />
+	<parameter name="runningMachine" value="mabzh02-win10" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	
+	
+	<test name="CI Test" preserve-order="true">
+		<classes> 
+		<!-- Ma, Zhaoguo -->
+		 <class name="api.users.sourcefilters.GetSourceFiltersFromSpecificUserTest" />
+		 <class name="api.users.sourcefilters.GetSpecificSourceFilterFromSpecificUserTest" />
+		 <!--
+		 <class name="api.users.sourcefilters.GetSourceFiltersFromSpecificUserCountTest" /> 
+		 <class name="api.users.sourcefilters.GetSpecificSourceFilterFromSpecificUserCountTest" />
+		 <class name="api.cloudaccounts.CreateCloudAccountTest" />
+		  -->
+		 <class name="api.users.sourcefilters.CreateSourceFilterForLoggedinUserTest" />
+		 <class name="api.users.sourcefilters.UpdateSourceFilterForLoggedinUserTest" />
+		 <class name="api.organizations.GetUsersFromOrganizationAdvTest"/>
+		 <class name="api.organizations.GetUsersFromOrganizationTest"/>	
+		 <class name="api.organizations.UpdateLoggedInOrganizationTest" />
+		 <class name="api.organizations.UpdateOrganizationByIDTest" />
+		 <class name="api.userroles.GetUserrolesTest" />
+		 
+		 <class name="api.jobs.PostJobTest" />
+		 <class name="api.jobs.PostJobDataTest" />
+		 <class name="api.users.destinationfilters.CreateDestinationFilterTest" />
+		 <class name="api.users.destinationfilters.CreateDestinationFilterForLoggedinUserTest" />
+		 <class name="api.users.jobfilters.CreateJobFilterForLoggedinUserTest" />
+		 <class name="api.users.jobfilters.UpdateJobFilterForLoggedinUserTest" />
+		 <class name="api.users.jobfilters.CreateJobFilterTest" />
+		 <class name="api.users.jobfilters.UpdateJobFilterTest" />
+		 <class name="api.users.picture.UploadPicturebyUserIDTest" />
+		 <class name="api.users.picture.UploadPictureForLoggedInUserTest" />
+		 
+		 <!-- 
+		 <class name="api.users.hypervisorfilters.CreateHypervisorfilterForLoggedinUserTest"/>	 
+		 <class name="api.users.hypervisorfilters.CreateHypervisorfilterTest"/>
+		 <class name="api.users.hypervisorfilters.DeleteHypervisorfilterForLoggedinUserTest"/>
+		 <class name="api.users.hypervisorfilters.DeleteHypervisorfilterTest"/>
+		 <class name="api.users.hypervisorfilters.GetHypervisorfiltersForLoggedinUserTest"/>
+		 <class name="api.users.hypervisorfilters.GetHypervisorfiltersForSpecificUserTest"/>
+		 <class name="api.users.hypervisorfilters.GetSpecificHypervisorfilterForLoggedinUserTest"/>
+		 <class name="api.users.hypervisorfilters.GetSpecificHypervisorfilterForSpecificUserTest"/>
+		 <class name="api.users.hypervisorfilters.UpdateHypervisorfilterForLoggedinUserTest"/>
+		 <class name="api.users.hypervisorfilters.UpdateHypervisorfilterTest"/>
+		 <class name="api.users.hypervisorfilters.GetSystemHypervisorfiltersTest"/>
+		  -->
+		 <class name="api.hypervisor.CreateHypervisorTest" />
+		 <class name="api.hypervisor.UpdateHypervisorTest" />
+		 <class name="api.hypervisor.DeleteHypervisorTest" />
+		 <class name="api.sites.SiteTokenasOrgAdminTest" />
+		 <class name="api.organizations.accounts.UploadPictureForAccount" />
+		 <class name="api.users.policyfilters.CreatePolicyFilterForLoggedinUserTest"/>
+		 <class name="api.users.policyfilters.CreatePolicyFilterForSpecificUserTest"/>
+		 <class name="api.users.policyfilters.DeletePolicyFilterForLoggedinUserTest"/>
+		 <class name="api.users.policyfilters.DeletePolicyFilterForSpecificUserTest"/>
+		 <class name="api.users.policyfilters.UpdatePolicyFilterForLoggedinUserTest"/>
+		 <class name="api.users.policyfilters.UpdatePolicyFilterForSpecificUserTest"/>
+		 <class name="api.users.policyfilters.GetSpecificPolicyFilterForLoggedinUserTest"/>
+ 	 	 <class name="api.users.policyfilters.GetSpecificPolicyFilterForSpecificUserTest"/>
+ 	 	 <class name="api.users.policyfilters.GetSystemPolicyFilterTest"/>
+ 	 	 <class name="api.users.policyfilters.GetPolicyFiltersForSpecificUserTest"/>
+ 	 	 <class name="api.users.policyfilters.GetPolicyFiltersForLoggedinUserTest"/>
+ 	 	 <class name="api.sources.GetRecoveryTargetsTest" />
+ 	 	 <class name="api.sources.GetRecoveryImageFormatsTest" />
+ 	 	 <class name="api.linuxbackupservers.CreateLinuxBackupServerTest" />
+ 	 	 <class name="api.linuxbackupservers.UpdateLinuxBackupServerTest" />
+ 	 	 <class name="api.linuxbackupservers.DeleteLinuxBackupServerTest" />
+ 	 	 <class name="api.linuxbackupservers.GetLinuxBackupServerTest" />
+ 	 	 <class name="api.organizations.DeactiveOrganizationTest" />
+ 	 	 <class name="api.organizations.DestroyOrganizationTest" />
+ 	 	 
+ 	 	 	<class name="api.destination.GetDatacenterTest" />
+			<class name="api.destination.PostDestinationTest"/>
+			<class name="api.policies.GetPoliciesBackuptypesTest" />	
+			<class name="api.policies.GetPolicyTypesTest" />	
+			<class name="api.organizations.GetAmountAndPolicyTypeForSpecifiedOrganizationTest" />
+			<class name="api.policies.GetPoliciesAmountTest"/> 
+			<class name="api.sources.groups.GetSourceGroupAmount"/>
+			<class name="api.recoveredresources.GetAmountForVSBAndIVMSourceTest" />	
+		
+		<!-- Yang, Eric 
+		<class name="api.organizations.GetOrganizationsIdRecoveredresourcesTypesTest" />	 
+		 	<class name="api.userroles.GetUserrolesAmountTest" />
+		 	<class name="api.users.GetUsersAmountTest" />	
+		 	-->
+		 
+ 	 	 
+		</classes>
+	 </test>
+</suite>

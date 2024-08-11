@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Site">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	
+	<parameter name="baseURI" value="http://xiang-gitlab" />
+	<parameter name="port" value="9080" />
+	<parameter name="csrAdminUserName" value="xiang.li@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="logFolder" value="C:\workspace\CCCH_Automation\extent-report\" />
+
+	<test name="Test Update Site By Id">
+		<classes>
+			<class name="test.restapi.site.TestLoginSite">
+				<methods> 
+					<include name="Given_CsrAdmin_when_LoginSiteOfMspOrgnization_Should_Successful" /> 
+				</methods> 
+			</class>
+		</classes>
+	</test>
+	
+
+	
+</suite>

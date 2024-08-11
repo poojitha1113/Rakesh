@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Ramesh_suite" >
+	<parameter name= "baseURI" value= "https://tccapi.arcserve.com"/>
+    <parameter name= "port" value= "8443"/>
+    
+	<parameter name= "csrAdminUserName" value= "ramesh_csr@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Mclaren@2020"/>
+	
+	<parameter name="csrReadOnlyAdminName" value="ramesh_csr_read_only@arcserve.com"/>
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2010"/>
+	
+	<parameter name= "logFolder" value= "E:\Automation\Logs"/>
+	<parameter name="summaryFilePath" value="E:\Automation\Logs\ALLBQs.html"></parameter>
+	
+	<parameter name="mailRecipients" value="rakesh.chalamala@arcserve.com;ramya.nagepalli@arcserve.com"></parameter>
+	<parameter name= "runningMachine" value= "RASHSPOGBQ"/>
+	<parameter name="buildVersion" value="SPOGv1"/>
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	<test name="User Test" >		
+		
+	  <classes> 		
+				  
+		 <class name="api.users.userfilters.CreateUserFilterForLoggedInUserTest" />
+		 <class name="api.users.userfilters.CreateUserFilterForSpecificUserTest" />
+		 <class name="api.users.userfilters.UpdateUserFilterForLoggedInUserTest" />
+		 <class name="api.users.userfilters.UpdateUserFilterForSpecifiedUserTest" /> 
+		 
+		 <class name="api.users.jobfilters.DeleteJobFilterForLoggedInUserTest" />
+		 <class name="api.users.jobfilters.DeleteJobFilterByFilterIDTest" />
+		 
+	 	 <class name="api.users.logsfilters.DeletelogFilterForLoggedInUserTest" />
+		 <class name="api.users.logsfilters.DeleteLogFilterbyFilterIdTest" />
+		 
+		 <class name="api.users.sourcefilters.DeleteSourceFilterforSpecifiedUserTest" />
+		 <class name="api.users.sourcefilters.DeletesourceFilterForLoggedInUserTest" />
+		 
+		 <class name="api.users.destinationfilters.GetSpecifiedDestinationFilterForLoggedInUserTest" />  
+		 <class name="api.users.destinationfilters.DeleteDestinationFilterbyFilterIdTest" /> 
+		 <class name="api.users.destinationfilters.GetDestinationFilterbyFilterIdTest" /> 
+		 <class name="api.users.destinationfilters.GetDestinationFiltersForLoggedInUserTest" />
+		 <class name="api.users.destinationfilters.DeleteDestinationFilterForLoggedInUserTest" />		 
+		  
+		 <class name="api.logs.DeletelogsbylogIdTest" />
+		 <class name="api.jobs.GetJobsbyIdTest" />
+		 
+		 <class name="api.sites.GetsiteconfigurationTest" /> 
+		 		 	 	 
+		</classes>
+	 </test>
+</suite>

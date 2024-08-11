@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Chandra_SPOG_NO_Volumes_AFT_Suite1" > <!-- 20 -->
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	
+	<parameter name="csrAdminUserName" value="Chandra_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName" value="Chandra_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2020" />
+	
+	<parameter name="logFolder" value="E:\Automation_Logs" />
+	<parameter name="runningMachine" value="CHAKAN-LAPW10.ARCSERVE.COM" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	
+	<parameter name="summaryFilePath" value="E:\Automation_Logs\summaryfile_SPOG_NO_Volumes_AFT_1.html"></parameter>
+	<parameter name="mailRecipients" value="ChandraKanth.Kanamarlapudi@arcserve.com;Prasad.Deverakonda@Arcserve.com;rakesh.chalamala@arcserve.com"></parameter>
+	<parameter name="enroll" value="false"></parameter>
+	
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	
+	<test name="Business Intelligence Reports"> <!-- 9 -->
+		<classes>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesTest"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdTrial"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChTrial"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdNearCapacity"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdOverCapacity"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChNearCapacity"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChOverCapacity"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExemption"></class>
+				<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExpiration"></class>
+		</classes>
+	</test>
+	<test name="Reports"> <!-- 4 -->
+		<classes>
+				<class name="api.reports.reportschedules.GetReportsTest"></class>
+				<class name="api.reports.reportschedules.DeleteReportByIdTest"></class>
+	 			<class name="api.reports.reportschedules.DeleteReportsTest"></class>
+				<class name="api.reports.reportschedules.GenerateReportNowTest"/>
+		</classes>
+	</test>
+	
+	<test name="Reports Schedules"> <!-- 5 -->
+		<classes>
+				<class name="api.reports.reportschedules.GetReportScheduleTest"/>
+				<class name="api.reports.reportschedules.CreateReportScheduleTest"/> 
+	 			<class name="api.reports.reportschedules.DeleteReportScheduleTest"/>
+	 			<class name="api.reports.reportschedules.DeleteReportsByScheduleIdTest"/>
+	 			<class name="api.reports.reportschedules.UpdateReportScheduleTest"/>	 			
+		</classes>
+	</test>
+	
+	<test name="Delete User Filters"> <!-- 2 -->
+		<classes>
+			<class name="api.users.userfilters.DeleteUserFilterForSpecifiedUserTest"/>
+	 	 	<class name="api.users.userfilters.DeleteUserFilterForLoggedInUserTest"/>
+		</classes>
+	</test>
+	
+</suite> 

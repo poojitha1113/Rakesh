@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Rakesh_BQ_Suite2" >
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" ></parameter>
+	<parameter name= "csrAdminUserName" value= "rakesh_csr@arcserve.com"/>
+    <parameter name= "csrAdminPassword" value= "Mclaren@2020"/> 
+    <parameter name="csrReadOnlyAdminName" value="rakesh_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2013" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="runningMachine" value="RAKCHA-PCW10" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="summaryFilePath" value="C:\API_Automation_Logs\summaryfile.html"></parameter>
+	<parameter name="mailRecipients" value="rakesh.chalamala@arcserve.com"></parameter>
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	
+	<test name="API_Test2" >
+	
+	
+		<classes>
+	 		  
+			<!-- <class name="api.sources.ConvertToAgentLessTest"></class>
+			<class name="api.organizations.submsp.ConvertToRootMspTest"></class>
+			<class name="api.organizations.DeleteOrganizationsCacheResourcesById"></class> 
+			<class name="api.policies.CreateSQLServerBackupPolicyTest"></class>
+			<class name="api.policies.DeletePolicyByPolicyId"></class>
+			<class name="api.policies.DisablePolicyByIdTest"></class>
+			<class name="api.policies.EnablePolicyByIdTest"></class> -->
+	 		<class name="api.hypervisor.HypervisorPolicyTest"></class>
+	 		<!-- <class name="api.logs.GetLogs"></class> 
+	 		<class name="api.sources.GetLogsBySourceId"></class>
+	 		<class name="api.jobs.GetJobsTest"></class> 	 	
+	 			
+			<class name="api.cloudrps.cloudhybridstores.CreateCloudHybridStoresTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.DestroyCloudHybridStoreByIdTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.GetCloudHybridStoresByIdTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.GetCloudHybridStoresForSpecifiedRPSTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.StartCloudHybridStoreTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.StopCloudHybridStoreTest"></class> 
+	 		<class name="api.cloudrps.cloudhybridstores.UpdateCloudHybridStoreByIdTest"></class>
+			<class name="api.cloudrps.CreateCloudRPSTest"/> 
+	 		<class name="api.cloudrps.DeleteCloudRPSbyIdTest"/>
+	 		<class name="api.cloudrps.GetCloudRPSbyIdTest"/>
+	 		<class name="api.cloudrps.GetCloudRPSTest"/>
+	 		<class name="api.cloudrps.UpdateCloudRPSbyIdTest"/>
+			<class name="api.cloudrps.datastores.CreateRPSDataStoreTest"></class>	
+	 		<class name="api.cloudrps.datastores.UpdateRPSDataStoreTest"></class> 
+			<class name="api.cloudrps.datastores.UpdateDatastoreUsageTest"></class>
+		 	<class name="api.cloudrps.datastores.DeleteRPSDatastorebyIdTest"></class>
+		 	<class name="api.cloudrps.datastores.DestroyRPSDatastoreByIdTest"></class>
+		 	<class name="api.cloudrps.datastores.GetCloudRPSDatastoreByIdTest"></class>
+		 	<class name="api.cloudrps.datastores.GetCloudRPSDatastoresForSpecifiedRPS"></class>
+		 	<class name="api.cloudrps.datastores.GetDatastores"></class> 
+		 	<class name="api.destination.AssignDatastoretoDestinationTest"></class>
+		 	<class name="api.destination.UnassignDatastoretoDestinationTest"></class> 	-->
+		 	<class name="api.cloudrps.datastores.GetDatastoreForSpecifiedDestinationTest"></class>	 	
+		 	<!-- <class name="api.cloudrps.datastores.RPSDataStoreStartTest"></class>
+	 		<class name="api.cloudrps.datastores.RPSDataStoreStopTest"></class>
+ -->
+		<!-- 	<class name="api.dashboard.GetTopCustomersTest"></class>
+	 		<class name="api.dashboard.GetDashboardAccountSummaryTest"></class>
+	 	<class name="api.hypervisor.GetHypervisorsTest"></class>
+	 			<class name="api.hypervisor.GetHypervisorByIdTest" />
+	 			<class name="api.hypervisor.GetVMSForSpecifiedHypervisor"></class>
+	 			<class name="api.hypervisor.AddVMSForSpecifiedHypervisor"></class>
+	 			<class name="api.hypervisor.RefreshVMSForSpecifiedHypervisor"></class>
+	 			<class name="api.hypervisor.GetHypervisorsAmount"></class>
+	 			<class name="api.destination.GetDestinationsById"></class>
+	 			<class name="api.destination.GetDestinationUsageByDestinationId"></class>
+	 		 	<class name="api.sources.GetSourcesForSpecifiedPolicyTest"></class> -->
+	 	
+	 	</classes>
+	 </test>
+</suite> 

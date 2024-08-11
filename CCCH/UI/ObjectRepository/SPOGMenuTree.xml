@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SPOG>
+ <UserName id="username"></UserName>
+ <UserPassword id="password"></UserPassword>
+ <LoginBtn id="login"></LoginBtn>
+ 
+ <Monitor xpath="//li[@value='Monitor']">
+ 	<SourceSummary xpath="//span[text()='Source Summary']">
+ 		<SourceCount xpath="//div[@class='customer-summary-tile tile']//h5"></SourceCount>
+ 		<Protected xpath="//span[text()='Protected']"></Protected>
+ 		<Offline xpath="//span[text()='Offline']"></Offline>
+ 		<NotProtected xpath="//span[text()='Not Protected']"></NotProtected>
+ 	</SourceSummary>
+ 	<UsageSummary xpath="//span[text()='Usage Summary']">
+ 		<CloudDirect xpath="//span[text()='Cloud Direct Volumes']"></CloudDirect>
+ 		<CloudHybrid xpath="//span[text()='Cloud Hybrid Stores']"></CloudHybrid>
+ 		<Capacity xpath="//span[text()='Capacity:']"></Capacity>
+ 		<Usage xpath="//div[@class='usage-summary-tile tile']//h5"></Usage>
+ 	</UsageSummary>
+ 	<PolicySummary xpath="//span[text()='Policy Summary']">
+ 		<PolicyCount xpath="//div[@class='policy-summary-tile tile']//h5"></PolicyCount>
+ 		<TotalPolicies xpath="//span[text()='Total Policies']"></TotalPolicies>
+ 		<Success xpath="//span[text()='Success']"></Success>
+ 		<Deploying xpath="//span[text()='Deploying']"></Deploying>
+ 		<Failure xpath="//span[text()='Failure']"></Failure>
+ 	</PolicySummary>
+ 		
+ 	<CustomerSummary xpath="//span[text()='Customer Summary']">
+ 		<totalCustomers xpath="//span[text()='Total Customers']"></totalCustomers>
+ 		<customersCount xpath="//div[@class='customer-summary-tile tile']//h5"></customersCount>
+ 		<Failed xpath="//div[@class='customer-summary-tile tile']//span[text()='Failed']"></Failed>
+ 		<Success xpath="//div[@class='customer-summary-tile tile']//span[text()='Success']"></Success>
+ 	</CustomerSummary>
+ 	<UsageSummaryAcrossCustomers xpath="//span[text()='Usage Summary Across Customers']"></UsageSummaryAcrossCustomers>
+ 	<SourceSummaryAcrossCustomers xpath="//span[text()='Source Summary Across Customers']">
+ 		<totalSources xpath="//span[text()='Total Sources']"></totalSources>
+ 		<totalSourcesCount xpath="//div[@class='policy-summary-tile tile']//h5"></totalSourcesCount>
+ 	</SourceSummaryAcrossCustomers>
+ 	
+ 	<Widgets>
+ 		<BackupJobSummary xpath="//h6[text()='backup job summary']">
+ 			<Last24Hours xpath="//span[text()='Last 24 hours']"></Last24Hours>
+ 		</BackupJobSummary>
+ 		<Recent10Jobs xpath="//h6[text()='recent 10 jobs in progress']">
+ 			<ViewAllJobs xpath="//span[text()='View all jobs']"></ViewAllJobs>
+ 		</Recent10Jobs>
+ 		<Top10Sources xpath="//h6[text()='Top 10 Sources']"></Top10Sources>
+ 		<Top10Policies xpath="//h6[text()='top 10 policies']">
+ 			<ByJobStatus xpath="//span[text()='by Job Status']"></ByJobStatus>
+ 		</Top10Policies>
+ 		<Top10Customers xpath="//h6[text()='top 10 customers']">
+ 			<ByCapacityUsage xpath="//span[text()='by Capacity Usage']"></ByCapacityUsage>
+ 		</Top10Customers>
+ 		<DataTransferForCloudDirect xpath="//h6[text()='data transfer summary for cloud direct volumes']"></DataTransferForCloudDirect>
+ 		<DedupeSavingsForCloudHybrid xpath="//h6[text()='Dedupe Savings Trend for Cloud Hybrid Stores']"></DedupeSavingsForCloudHybrid>
+ 		<UsageTrendForCloudDirect xpath="//h6[text()='usage trend for cloud direct volumes']">
+ 			<ByFullBackupData xpath="//span[text()='by Full Backup Data']"></ByFullBackupData>
+ 		</UsageTrendForCloudDirect>
+ 		<UsageTrendForCloudHybrid xpath="//h6[text()='usage trend for cloud hybrid stores']"></UsageTrendForCloudHybrid>
+		<Recent10JobsInProgress xpath="//span[text()='Recent 10 Jobs In Progress']"/>
+ 	</Widgets>
+ 
+ 	<Alerts xpath="//a[@href='/']/span">
+ 		<Critical xpath="//span[text()='Critical']"></Critical>
+ 		<Warning xpath="//span[text()='Warning']"></Warning>
+ 		<Information xpath="//span[text()='Information']"></Information>
+ 		<CriticalCount xpath="//span[@class='critical']"></CriticalCount>
+ 		<WarningCount xpath="//span[@class='warning']"></WarningCount>
+ 		<InformationCount xpath="//span[@class='info']"></InformationCount>
+ 		<AcknowledgeAll xpath="//span[text()='Acknowledge All']"></AcknowledgeAll>
+ 		<AcknowledgeSelected xpath="//div[@class='tab-content']//span[@class='caret']"></AcknowledgeSelected>
+ 	</Alerts>
+ 	
+ </Monitor>
+ <!--  <Monitor xpath = "//span[text()='Monitor']"></Monitor> -->
+ <LoginErrorMsg xpath = "//label[@class='error-message']/span"></LoginErrorMsg>
+ <Configure xpath ="//li[@value='Configure']" >
+ 	<CapacityUsageTrend xpath = "//span[text()='Capacity Usage Trend']"> </CapacityUsageTrend>
+ 	<UserAccounts xpath = "//a[@href='/configure/access_control/user_accounts']">
+ 		<AddUser xpath = "//button[@class='btn btn-primary add-destination']"></AddUser>
+ 		<UserTable>
+ 			<Headers xpath ="//div[@role='columnheader']"></Headers>
+ 			<Rows xpath ="//div[@class='rt-tr-group']"></Rows>
+ 			<Columns xpath ="/div/div"></Columns>
+ 			<Body  xpath ="//div[@class='rt-tbody']"></Body>
+ 		</UserTable>
+ 		<UserAccountDetails>
+ 			<FirstName id="first_name"/>
+ 			<LastName id="last_name"/>
+ 			<Email xpath="//span[@class='emailLabel']"/>
+ 			<Role xpath="//div[@class='modal-dialog']//Button[@class='dropdown-toggle btn btn-default']" />	 
+ 			<RoleMenu xpath="//div[@class='modal-dialog']//ul[@class='dropdown-menu dropdown-menu-right' ]"	/>	
+ 			<Cancel xpath="//div[@class='modal-dialog']//span[text()='Cancel']/parent::button"/>
+ 			<Save xpath="//div[@class='modal-dialog']//span[text()='Save']/parent::button"/>
+ 			<FirstNameLengthError xpath="//div[text()='The length of first_name is not correct.']" />
+ 			<LastNameLengthError xpath="//div[text()='The length of last_name is not correct.']" />
+ 		</UserAccountDetails>
+ 	</UserAccounts>
+ 	
+ 	<Branding xpath="//a[@href='/configure/branding/all']">
+			<OrganizationName xpath="//input[@name='organization_name']" />
+
+			<Save xpath="//div[@aria-hidden='false']//span[text()='Save Changes']" />
+			<RequiredError xpath="//div[text()='Required']"></RequiredError>
+			<MinLengthError xpath="//div[text()='Must be 3 characters or more']"></MinLengthError>
+			<ExceedOrgNameError xpath="//div[text()='Must be 128 characters or less']"></ExceedOrgNameError>
+			<Primarycolor xpath="//input[@name='primary_color']"></Primarycolor>
+			<InvaliHexCode xpath="//span[text()='Invalid Hexcode']"></InvaliHexCode>
+			<SecondaryColor xpath="//input[@name='secondary_color']"></SecondaryColor>
+			<Uploadlogo xpath="//span[text()='Update Logo']"></Uploadlogo>
+			<ChoosePhoto xpath="//span[text()='Choose Photo']"></ChoosePhoto>
+			<UpdatePhoto xpath="//button[@type='submit']//span[text()='Update']"></UpdatePhoto>
+			<Cancel xpath="//div[@class='footer']//span[text()='Cancel']"></Cancel>
+
+			<PortalUrl xpath="//input[@name='portal_url']"></PortalUrl>
+			<LoginBtn xpath="//a[text()='Login']" />
+			<UsesamelogoasYourBrandSection xpath="//input[@id='brand-logo']"></UsesamelogoasYourBrandSection>
+			<VerifyText xpath="//div[text()='OR']" />
+			<UploadLogInImage xpath="//button[@class='update-brand-logo']" />
+
+			<EmailTab xpath="//a[text()='Emails']"></EmailTab>
+			<EmailMessage
+				xpath="//span[text()='Configure to include branding in all the emails received by the users.']"></EmailMessage>
+			<ForEmailerName xpath="//input[@name='emailer_name']"></ForEmailerName>
+			<FromEmailAdress xpath="//input[@name='email']"></FromEmailAdress>
+			<SalesChart xpath="//input[@name='support_sales']"></SalesChart>
+			<SupportChart xpath="//input[@name='support_chat']"></SupportChart>
+			<FaceBookLink xpath="//input[@name='facebook_link']"></FaceBookLink>
+			<TwitterLink xpath="//input[@name='twitter_link']"></TwitterLink>
+			<LinkedInLink xpath="//input[@name='linkdin_link']"></LinkedInLink>
+			<SocialMediaPlatForm xpath="//input[@name='social_media_platform']"></SocialMediaPlatForm>
+			<ContactUs xpath="//input[@name='contact_us']"></ContactUs>
+			<LegalNotice xpath="//input[@name='legal_notice']"></LegalNotice>
+			<Privacy xpath="//input[@name='privacy']"></Privacy>
+			<UpdatePhotoDialogMenu xpath = "//span[text()='Update Photo']"/>
+			<CancelUplogoLoginImage xpath="//div[@class='modal-content']//span[text()='Cancel']"/>
+		
+		</Branding>
+		
+		<Roles xpath="//span[text()='Roles']">
+			<RolesTable>
+				<Header
+					xpath="//div[@class='ReactTable -striped -highlight mock-data-indicator']//div[@class='rt-thead -header']" />
+				<Rows xpath="//div[@class='rt-tr']" />
+				<Body xpath="//div[@class='rt-tbody']" />
+				<RolesHeaderDetails>
+					<Role
+						xpath="//div[@class='rt-resizable-header-content']//span[text()='Role']" />
+					<NoOfUsers
+						xpath="//div[@class='rt-resizable-header-content']//span[text()='No. of Users']" />
+					<Description
+						xpath="//div[@class='rt-resizable-header-content']//span[text()='Description']" />
+				</RolesHeaderDetails>
+			</RolesTable>
+			<RolesDetails>
+				<AdminRoles>
+					<CickonExpander xpath="//div[@class='rt-expander']" />
+					<DirectAdminRole
+						xpath="//div[@class='rt-td']//span[@id='direct_admin-role_name']" />
+					<AdminUserCount
+						xpath="//div[@class='rt-td']//span[@id='direct_admin-user_count']" />
+					<AdminRoleDescription
+						xpath="//div[@class='rt-td']//span[@id='direct_admin-role_description']" />
+					<AdminRoleDetailsBody xpath="//div[@class='role-details-wrapper']">
+						<Permissons
+							xpath="//table[@class='table table-borderless table-condensed role-details'] //tr[@class='row0']" />
+						<TableSecondRow
+							xpath="//table[@class='table table-borderless table-condensed role-details'] //tr[@class='row1']" />
+					</AdminRoleDetailsBody>
+				</AdminRoles>
+				<MspRolesDetails>
+					<MspadminRole
+						xpath="//div[@class='rt-td']//span[@id='msp_admin-role_name']" />
+					<MspAdminUserCount
+						xpath="//div[@class='rt-td']//span[@id='msp_admin-user_count']" />
+					<MspadminRoleDescription
+						xpath="//div[@class='rt-td']//span[@id='msp_admin-role_description']" />
+					<MSPaccountadminrole
+						xpath="//div[@class='rt-td']//span[@id='msp_account_admin-role_name']" />
+					<MspaccountadminUserCount
+						xpath="//div[@class='rt-td']//span[@id='msp_account_admin-user_count']" />
+					<MspAccountadminDescription
+						xpath="//div[@class='rt-td']//span[@id='msp_account_admin-user_count']" />
+				</MspRolesDetails>
+			</RolesDetails>
+		</Roles>
+
+<SourceGroups
+			xpath="//ul[@class='sub-menu-panel collapse show']//span[text()='Source Groups']">
+			<CreateSourceGroupBtn xpath="//span[text()='Create Group']" />
+			<SourceGroupName xpath="//input[@id='group_name']" />
+			<Create xpath="//span[text()='Create']" />
+			<Cancel xpath="//button[@class='btn btn-secondary']//span[text()='Cancel']" />
+			<DeleteSoucregroup xpath="//span[text()='Delete Group']" />
+			<SearchInput xpath="//input[@id='searchInput']" />
+			<SearchIcon xpath="//button[@class='search-icon d-flex align-items-center']" />
+			<Clearall xpath="//div[@class='pb-2']//span[text()='Clear All']" />
+			<ClickonSourceGroupName xpath="//a[@href='javascript:void(0);']"/>
+			<AddSoucrestoGroup xpath="//button[@class='btn btn-primary add-destination']//span[text()='Add Sources to Group']"/>
+			<AddSelectedSources xpath="//span[text()='Add Selected Sources']"/>
+			<SelectAllSources xpath="//div[@class='checkbox-cell']//input[@id='select-th']"/>
+			<BulkActions xpath="//button[text()='Actions']"/>
+			<RemoveSourcesFromGroup xpath="//span[text()='Remove from group']"/>
+			
+			
+		</SourceGroups>
+
+		<Entitlements
+			xpath="//div[@class='d-flex justify-content-between list-wrapper']//span[text()='Entitlements']">
+			<ActivateNewOrder xpath="//span[text()='Activate New Order']" />
+			<OrderId xpath="//input[@id='order_id']" />
+			<FullFilMentNumber xpath="//input[@id='order_number']" />
+			<Activate xpath="//span[text()='Activate']" />
+			<Cancel xpath="//button[@id='cancel-order']" />
+			<CloseActiavteOrderMenu xpath="//a[@id='close-modal']" />
+			<SummaryDiv xpath="//div[@class='summary']" />
+			<ContentDiv xpath="//div[@class='content']" />
+			<InformationDiv xpath="//div[@class='col-md-6']" />
+
+		</Entitlements>
+ </Configure>
+ <UserLogoutWrapper xpath="//div[@class='logout-wrapper d-flex align-items-center']"> 
+  	<Logout xpath = "//a[@href='/logout']"></Logout>
+ </UserLogoutWrapper>	
+ <SetPassword>
+  	<CreatePassword id="create_password" ></CreatePassword>
+  	<ConfirmPassword id="confirm-password"></ConfirmPassword>
+  	<CreateAcount id ="create-account"></CreateAcount>
+  	<Agree xpath="//span[text()='I agree to the']"></Agree>
+ </SetPassword>
+ <Protect  xpath ="//li[@value='Protect']">
+ <ReplicateFrom xpath="//span[contains(text(),'Replicate from a remotely-managed RPS')]"></ReplicateFrom>
+ <ReplicateTo xpath="//span[text()='Replicate to a remotely-managed RPS']"></ReplicateTo>
+  	<Policy  xpath = "//a[@href='/protect/policies/all']">
+  		<AddPolicy xpath="//span[text()='Add Policy']"></AddPolicy>
+  		<PolicyForm>
+	  		<Basics xpath="//a[@href='/protect/policies/all/create/basics']">
+	  			<PolicyName id="policy_name"></PolicyName>
+  				<BaasPolicy id="cloud_direct_baas"></BaasPolicy>
+  				<DraasPolicy id="cloud_direct_draas"></DraasPolicy>
+  				<ReplicationPolicy id="cloud_hybrid_replication"></ReplicationPolicy>
+  				<Description xpath="//textarea[@name='policy_description']"></Description>
+	  		</Basics>
+	  		<Source xpath="//a[@href='/protect/policies/all/create/source']">
+  				<SavedSearchLabel xpath="//span[text()='Saved Searches:']"></SavedSearchLabel>
+	  			<SelectSourceBtn xpath="//span[text()='Select Source(s)']"></SelectSourceBtn>
+	  			<AddSourceBtn xpath="//span[text()='Add Source(s)']"></AddSourceBtn>
+	  		</Source>
+  			<Destination xpath = "//a[@href='/protect/policies/all/create/task']">
+  				<DestinationConnector xpath="//span[@class='connector']"></DestinationConnector>
+  				<NewDestinationBlock xpath="//div[@class='block-content']//div[@class='destination-block']"></NewDestinationBlock>
+  				<WhatToProtect>
+  					<ActiveType xpath="//button//span[text()='Select']"></ActiveType>
+  					<WindowsImage xpath="//span[text()='Windows Image (entire disk drive)']">
+  					<ReplicateFrom xpath="//span[contains(text(),'Replicate from a remotely-managed RPS')]"></ReplicateFrom>
+  					<ReplicateTo xpath="//span[text()='Replicate to a remotely-managed RPS']"></ReplicateTo>								
+	  					<FullSystem xpath="//label[@for='fullSystem']"></FullSystem>
+	  					<SelectDrive xpath="//label[@for='selectDrive']">
+	  						<DriveContainer xpath="//div[@class='checkBoxGroupContainer']"></DriveContainer>
+	  					</SelectDrive>
+  					</WindowsImage>
+  					<BackupFile xpath="//span[text()='Cloud Direct file folder backup']"></BackupFile>
+  					<BackupFileAdd xpath="//span[text()='Add']"></BackupFileAdd>
+  					<PathLine 	xpath="//div[@class='pathContainer']"></PathLine>
+  				
+  				</WhatToProtect>
+  				
+  				<WhereToProtect xpath="//a[text()='2. Where to protect']">
+  					<Destination xpath="//button//span[text()='Select']"/>
+  					<DestinationContainer xpath="//div[@class='destinationTabContainer']"></DestinationContainer>
+  					<CreateLocalBackup4Image id="destinations[0].cloud_direct_image_backup.local_backup.enabled"></CreateLocalBackup4Image>	
+  					<CreateLocalBackupLabel4Image  xpath="//label[@for='destinations[0].cloud_direct_image_backup.local_backup.enabled']"></CreateLocalBackupLabel4Image>
+  					<LocalBackupPath4Image id="destinations[0].cloud_direct_image_backup.local_backup.path"></LocalBackupPath4Image>
+  					<CreateLocalBackup4File id="destinations[0].cloud_direct_file_backup.local_backup.enabled"></CreateLocalBackup4File>
+  					<CreateLocalBackupLabel4File  xpath="//label[@for='destinations[0].cloud_direct_file_backup.local_backup.enabled']"></CreateLocalBackupLabel4File>
+  					<LocalBackupPath4File id="destinations[0].cloud_direct_file_backup.local_backup.path"></LocalBackupPath4File>
+  				    
+  				    <RemoteConsoleServerName xpath="//input[@id='destinations[1].udp_replication_to_remote.remote_console_name']"></RemoteConsoleServerName>
+  					<RemoteConsoleUsername xpath="//input[@id='destinations[1].udp_replication_to_remote.user_name']"></RemoteConsoleUsername>
+  					<RemoteConsolePassword xpath="//input[@id='destinations[1].udp_replication_to_remote.password']"></RemoteConsolePassword>
+  					<RemoteConsolePort xpath="//input[@id='destinations[1].udp_replication_to_remote.port']"></RemoteConsolePort>
+  					<HTTPProtocol xpath="//span[text()='http']"></HTTPProtocol>
+  					<HTTPSProtocol xpath="//span[text()='https']"></HTTPSProtocol>
+  					<ConnectButton xpath="//span[text()='Connect']"></ConnectButton>
+  					<SelectPolicyDropDown xpath="//span[text()='Select']"></SelectPolicyDropDown>
+  					<RetryMinutes xpath="//input[@id='destinations[1].udp_replication_to_remote.retry_start']"></RetryMinutes>
+  					<RetryNumber xpath="//input[@id='destinations[1].udp_replication_to_remote.retry_times']"></RetryNumber>
+  			
+  				</WhereToProtect>
+  				<WhenToProtect xpath="//a[text()='3. When to protect']" >
+  					<BackupSchedule xpath="//div[@class='dropdown-field dropdown-field-width']//button[@class='dropdown-toggle btn btn-default']" ></BackupSchedule>
+  					<StartTimeHour xpath="(//div[@class='time-wrapper-left hoursAndMinutes']//button[@class='dropdown-toggle btn btn-default'])[1]"></StartTimeHour>
+  					<StartTimeMinute xpath="(//div[@class='time-wrapper-left hoursAndMinutes']//button[@class='dropdown-toggle btn btn-default'])[2]"></StartTimeMinute>
+  					<StartTimeClock xpath="//div[@class='time-wrapper-right']//button[@class='dropdown-toggle btn btn-default']"></StartTimeClock>		
+  					<ThrottleScheduleAdd xpath="//div[@class='throttleTitleContainer']//span[text()='Add']"></ThrottleScheduleAdd>
+  					<ThrottleScheduleLine xpath="//div[contains(@class,'dropdown-wrapper dropdown-wrapper-inner add-drop-up-dropdown d-flex align-items-center p-20')]"></ThrottleScheduleLine> 													   		
+  					<ThrottleRunScheduleStartTime id="throttleSchedule[0].start_time.time"></ThrottleRunScheduleStartTime>
+  					<ThrottleRunScheduleStartTimeClock xpath="(//div[@class='time-wrapper-right']//button[@class='dropdown-toggle btn btn-default'])[2]"></ThrottleRunScheduleStartTimeClock>		
+  					<MergeScheduleAdd xpath="//div[@class]//span[text()='Add']"></MergeScheduleAdd>	
+  					<ScheduleLine xpath="//div[contains(@class,'dropdown-wrapper dropdown-wrapper-inner')]"></ScheduleLine>
+  					<ClearAllSchedule xpath="//*[@title='Clear all']"></ClearAllSchedule>
+  				
+  				</WhenToProtect>
+  				<AdditionalSetting  xpath="//a[contains(text(),'Additional Settings')]">
+  					<ExcludeRuleAdd xpath="//div[@class='additionalTitleContainer']//span[text()='Add']"></ExcludeRuleAdd>
+  					<ExcludeRuleLine xpath="//div[@class='aditionalSettingContainer']"></ExcludeRuleLine>
+  					<DailyBackupsRetention xpath="//input[@id='destinations[0].udp_replication_from_remote.retention_policy.daily_backup']"></DailyBackupsRetention>
+  					<MonthlyBackupsRetention xpath="//input[@id='destinations[0].udp_replication_from_remote.retention_policy.monthly_backup']"></MonthlyBackupsRetention>
+  					<WeeklyBackupsRetention xpath="//input[@id='destinations[0].udp_replication_from_remote.retention_policy.weekly_backup']"></WeeklyBackupsRetention>
+  					<ManualBackupsRetention xpath="//input[@id='destinations[0].udp_replication_from_remote.retention_policy.manual_backup']"></ManualBackupsRetention>
+  					<RetentionPolicy xpath="//span[text()='Retention Policy']"></RetentionPolicy>
+  				</AdditionalSetting>
+  			</Destination>
+  			<CreatePolicyBtn xpath="//span[text()='Create Policy']"></CreatePolicyBtn>	
+  		</PolicyForm>
+  		<PolicyTable>
+  			<Headers xpath ="//div[@role='columnheader']"></Headers>
+ 			<Rows xpath ="//div[@class='rt-tr-group']"></Rows>
+ 			<Columns xpath ="/div/div"></Columns>
+ 			<Body  xpath ="//div[@class='rt-tbody']"></Body>
+  		</PolicyTable>
+  	</Policy>
+  	<Source  xpath="//li[@value='Sources']">
+  		<AddSources xpath = "//button[@class='btn btn-primary']/span[text()='Add Source(s)']"></AddSources>
+  		<DownloadAgent xpath = "//span[text()='Download Agent']">
+  			<Title xpath = "//div[@class='modal-header']/h4[text()='Download Agent']"></Title>
+  			<Form xpath = "//div[@class='modal-body']/form"></Form>
+  			<Agent xpath = "//div[@class='modal-body']/form//button[@type='button']"></Agent>
+  			<OVA xpath = "//div[@class='modal-body']/form//button/span"></OVA>  		
+  		</DownloadAgent>
+  		<SelectHypervisorLabel xpath = "//span[text()='Select Hypervisor']"></SelectHypervisorLabel>
+		<LatestJobPopoverContent xpath = "//div[@class='popover-content']"></LatestJobPopoverContent>
+  	</Source>
+  	<RecoveredVMs xpath="//a[@href='/protect/recovered_resources/recovered_vms']"></RecoveredVMs>
+  	<Destinations xpath = "//a[@href='/protect/destinations/all']"></Destinations>
+	<CustomerAccounts>
+		<TotalCustomerAccountsLabel xpath="//label[text()='Total Customer Accounts']"></TotalCustomerAccountsLabel>
+		<TotalCustomerAccountsCount xpath="//label[@for='grid-count-label']"></TotalCustomerAccountsCount>
+ 		<AddCustomerAccount xpath="//button[@class='btn btn-primary add-destination']">
+ 			<Title xpath = "//span[text()='Add Customer Account']"></Title>
+ 			<CustomerName xpath = "//input[@name='organization_name']"></CustomerName>
+ 			<AddCustomer xpath = "//button[@type='submit']"></AddCustomer>
+ 		</AddCustomerAccount>
+ 		<CustomerAccountDetails>
+ 			<Form xpath="//form"></Form>
+ 			<CustomerName xpath ="//input[@name='organization_name']"></CustomerName>
+ 			<Actions xpath = "//button[text()='Actions']"></Actions>
+ 		</CustomerAccountDetails>
+ 		<SetUsageThreshold>
+ 			<Title xpath = "//h4/span[text()='Set usage threshold']"></Title>
+ 			<CDUsageThreshold xpath="//input[@name='cd_threshold_usage']"></CDUsageThreshold>
+ 			<CDUsageThresholdCapacity xpath="//div[@class='content']/div[1]//button[@type='button']"></CDUsageThresholdCapacity>
+ 			<CHUsageThresholdDiv xpath="//div[@class='content']/div[2]"></CHUsageThresholdDiv>
+ 			<CHUsageThreshold xpath="//input[@name='ch_threshold_usage']"></CHUsageThreshold>
+ 			<CHUsageThresholdCapacity xpath="//div[@class='content']/div[2]//button[@type='button']"></CHUsageThresholdCapacity>
+ 		</SetUsageThreshold>
+ 		<AssignMSPAccountAdmin>
+ 			<Title xpath="//h4[text()='Assign Admins to customer']"></Title>
+ 			<SearchAdmin xpath="//input[@class='Select-input']"></SearchAdmin>
+ 			<Add xpath="//*[text()='Add']"></Add>
+ 			<ContentDiv xpath="//div[@class='content']"></ContentDiv>
+ 			<Assign xpath="//button[@type='submit']"></Assign>
+ 		</AssignMSPAccountAdmin>
+ 		<ViewAsEndUserAdmin xpath="//span[text()='View as End-User Admin']">
+ 				<BannerDiv xpath="//div[@class='app-banner']"></BannerDiv>
+ 		</ViewAsEndUserAdmin>
+ 		<DeleteAction xpath="//a[@id='MenuItem_3']/span[text()='Delete']">
+ 				<Delete xpath="//button[@type='submit']/span[text()='Delete']"></Delete>
+ 				<Cancel xpath="//span[text()='Cancel']"></Cancel>
+ 		</DeleteAction>
+ 	</CustomerAccounts>
+ 	 	
+  	<Destinations xpath="//a[@href='/protect/destinations/all']">
+		<Title xpath="//a[@role='button']//span[text()='Destinations']"></Title>
+		<ActiveFilter xpath="//button[@class='selectlabel']"></ActiveFilter>
+		<SortName xpath="//div[@class='rt-th active-sort rt-resizable-header -cursor-pointer']"></SortName>
+		<SearchInput xpath="//input[@class='input-search-box']"></SearchInput>
+		<SearchStringSubmitButton xpath="//button[@class='search-icon d-flex align-items-center']"></SearchStringSubmitButton>
+		<SearchFilterButton xpath="//button[@class='arrow']"></SearchFilterButton>
+		<SearchFilter xpath="//button[@type='submit']"></SearchFilter>
+		<SearchPolicyFilterLabel xpath="//div[@class='select-wrapper']//span[text()='Protection Policy']"></SearchPolicyFilterLabel>
+		<SearchPolicyFilterInput xpath="//div[@class='Select-input']/input[@class='Select-input']"></SearchPolicyFilterInput>
+		<SearchPolicyFilterDropDown xpath="//div[@class='Select-control']/span[@class='Select-arrow-zone']"></SearchPolicyFilterDropDown>
+		<SaveSearchNameInput xpath="//input[@name='saveSearchName']"></SaveSearchNameInput>
+		<SaveSearch xpath="//button[@class='save-filter']/span[text()='Save Search']"></SaveSearch>
+		<SaveSearchButton xpath="//button[@class='btn btn-primary']/span[text()='Save Search']"></SaveSearchButton>
+		
+		<CreatedSavedSearches xpath="//div[@class='quick-filter-wrapper d-flex']//span[text()='Saved Searches:']"></CreatedSavedSearches>
+		
+		<SelectAll xpath="//label[@for='select-th']"></SelectAll>
+		<AddCloudVolume xpath="//span[text()='Add Cloud Volume']">
+			<AccountName xpath="//span[text()='Account Name']"></AccountName>
+			<VolumeName xpath="//input[@name='destination_name']"></VolumeName>
+			<VolumeNameError xpath="//input[@class='error']"></VolumeNameError>
+			<Retention xpath="//div[@class='col-md-12']//button/span[text()='Select']"></Retention>
+			<RetentionDropDown xpath="//div[@class='open dropup btn-group']//ul[@class='dropdown-menu']"></RetentionDropDown>
+			<Datacenter xpath="//div[@class='d-flex col-md-12']//button/span[text()='Select']"></Datacenter>
+			<DatacenterDropDown xpath="//div[@class='dropdown open btn-group']//ul[@class='dropdown-menu']"></DatacenterDropDown>
+			<Comments xpath="//textarea[@name='comments']"></Comments>
+			<cancel xpath="//div[@class='footer']//button[@type='button']"></cancel>
+			<AddCloudVolumeButton xpath="//div[@class='footer']//button[@type='submit']"></AddCloudVolumeButton>
+		</AddCloudVolume>
+		
+		
+		<Actions xpath="//div[@class='dropdown disabled btn-group']//button[text()='Actions']"></Actions>
+		
+		<SettingsButton xpath="//*[@class='manage-settings-overlay no-text dropdown-toggle btn btn-default']">
+			<ManageSaveSearch xpath="//button[@type='button']//span[text()='Manage Saved Searches']">
+				<ManageSaveSearchWindowTitle xpath="//div[text()='Manage Saved Searches']"></ManageSaveSearchWindowTitle>
+				<ToolTipLink xpath="//div[@class='d-flex align-items-center justify-content-between']//span/a"></ToolTipLink>
+				<TooltipInfo xpath="//div[@class='tooltip-inner']/span/span"></TooltipInfo>
+				<DefaultFilterLabel xpath="//div[@class='default-checkbox-wrapper']/label"></DefaultFilterLabel>
+				<SaveSearchInput xpath="//div[@class='d-flex flex-column']/input[@type='text']"></SaveSearchInput>
+				<SearchStringInput xpath="//div[@class='d-flex flex-column search-string-input']/input[@type='text']"></SearchStringInput>
+				<ProtectionPolicyInput xpath="//form[@class='advanced-search-wrapper flex-column collapse show d-flex']//input[@class='Select-input']"></ProtectionPolicyInput>
+				<ProtectionPolicyDropDown xpath="//form[@class='advanced-search-wrapper flex-column collapse show d-flex']//span[@class='Select-arrow']"></ProtectionPolicyDropDown>
+				<ClearProtectionPolicy xpath="//form[@class='advanced-search-wrapper flex-column collapse show d-flex']//span[@class='Select-clear']"></ClearProtectionPolicy>
+				<DeleteButton xpath="//button[@class='btn btn-secondary']//span[text()='Delete']"></DeleteButton>
+				<CancelButton xpath="//button[@class='btn btn-secondary']//span[text()='Cancel']"></CancelButton>
+				<SaveButton xpath="//button[@class='btn btn-primary']//span[text()='Save']"></SaveButton>
+			</ManageSaveSearch>
+			<ManageColumns>
+				<LatestJob xpath="//div[@class='react-grid-layout layout']//span[text()='Latest Job']"></LatestJob>
+				<Location xpath="//div[@class='react-grid-layout layout']//span[text()='Location']"></Location>
+				<DataCenterRegion xpath="//div[@class='react-grid-layout layout']//span[text()='Data Center Region']"></DataCenterRegion>
+				<Type xpath="//div[@class='react-grid-layout layout']//span[text()='Type']"></Type>
+				<Retention xpath="//div[@class='react-grid-layout layout']//span[text()='Retention']"></Retention>
+				<ProtectedData xpath="//div[@class='react-grid-layout layout']//span[text()='Protected Data']"></ProtectedData>
+				<SourceCount xpath="//div[@class='react-grid-layout layout']//span[text()='Source Count']"></SourceCount>
+				<ProtectionPolicy xpath="//div[@class='react-grid-layout layout']//span[text()='Protection Policy']"></ProtectionPolicy>
+			</ManageColumns>
+		</SettingsButton>
+		
+		<DestinationsTable>
+  			<Headers xpath ="//div[@role='columnheader']"></Headers>
+ 			<Rows xpath ="//div[@class='rt-tr-group']"></Rows>
+ 			<Columns xpath ="/div/div"></Columns>
+ 			<Body  xpath ="//div[@class='rt-tbody']"></Body>
+  		</DestinationsTable>
+  		
+  		<ContextualActions>
+  			<Edit xpath="//a/span[text()='Edit']"></Edit>
+  			<ViewRecoveryPoints xpath="//a/span[text()='View Recovery Points']"></ViewRecoveryPoints>
+  			<Delete xpath="//a/span[text()='Delete']"></Delete>
+  		</ContextualActions>
+  		
+		<CloudDirectVolumes xpath="//li[@value='Cloud Direct Volumes']"></CloudDirectVolumes>
+		<CloudHybridStores xpath="//li[@value='Cloud Hybrid Stores']"></CloudHybridStores>
+	</Destinations>
+  </Protect>
+  
+ <Analyze xpath ="//li[@value='Analyze']">
+  	<Jobs xpath="//li[@value='Jobs']"></Jobs>
+  	<Logs xpath="//li[@value='Log']"></Logs>
+  	<Reports xpath="//li[@value='Reports']//span[text()='Reports']">
+  		  	<Title xpath = "//h4[@class='modal-title']//span[text()='Create Report']"/>
+  		 	<ReportTypeTitle xpath ="//span[@class='content-item-title']//span[text()='Report Type']"/>
+  		 	<ReportTypebutton xpath="//span[@class='content-item-option']//button[text()='Select']"/>
+  		  	<DropDownMenu xpath="//div[@class='dropdown open btn-group']//ul[@class='dropdown-menu']//li"/>
+  		  
+  		<Common>
+  			<CreateReport xpath="//span[text()='Create Report']" />
+			<ReportName xpath="//input[@id='report_name']" />
+			<RecepientTitile xpath="//div[@id='recipientMailReportModal']//span[@class='content-item-title']"/>
+			<RecepientID xpath ="//input[@list='data']"/>
+			<Allsources xpath="//input[@id='all_sources']" />
+			<SelectedSources xpath="//span[text()='Report selected Source Groups']" />
+			<SelectedSourceGroupMenu xpath="//div[@class='column-name-list d-inline-flex flex-wrap pl-0']//span[@class='Select-arrow']" />
+			<Add xpath="//button[@type='button']//span[text()='Add']" />
+			<GenerateNow xpath="//span[text()='Generate Report now']" />
+			<SelectDatarange xpath="//div[@class='open dropup btn-group']//ul[@class='dropdown-menu']//li" />
+			<MenuTitle  xpath="//span[text()='Select a date range for the report']"/>
+			<DatarangeMenu xpath="//span[@class='content-item-option']//div[@class='dropup btn-group']" />
+			<ScheduleReport xpath="//span[text()='Set a Schedule']" />
+			<SchedulereportDeliveryTime xpath="//div[@class='time-wrapper-left hoursAndMinutes']/div[@class='dropdown btn-group']" />
+			<DelivaryTimemenu xpath="//div[@class='column-name-list d-inline-flex flex-wrap p-0']//ul[@class='dropdown-menu']//li[@role='presentation']"/>
+			<TimeType xpath="//div[@class='column-name-list d-inline-flex flex-wrap']" />
+			<TimeTypeMenu xpath="//div[@class='column-name-list d-inline-flex flex-wrap']//li[@role='presentation']" />
+			<FrequencyTitle  xpath = "//span[@class='content-item-title']//span[text()='Frequency']"/>
+			<Frequency xpath="//div[@class='col-md-6']//div[@class='dropup btn-group']"/>
+			<FrequencyMenu xpath="//div[@class='open dropup btn-group']//ul[@class='dropdown-menu']"/>
+			<FrequenceyItems xpath="//div[@class='open dropup btn-group']//li[@role='presentation']"/>
+			<CreateBtn xpath="//button[@id='submit']" />
+			<Selectarrow xpath="//button[@class='arrow']"/>
+			<Calendar>
+				<CalendarBtn xpath="//div[@class='report-modal-date-picker']/span[@class='calendar-icon']"/>
+				<AllCalendars xpath ="//div[@class='calendar-table']/table"/>
+				<LeftCalendarYearBtn  xpath = "//div[@class='calendar left']//select[@class='yearselect']"/>
+				<LeftCalendarAvailableYears xpath = "//div[@class='calendar left']//select[@class='yearselect']/option"/>
+				<LeftCalSelectedYear xpath ="//div[@class='calendar left']//table[@class='table-condensed']//select[@class='yearselect']//option[@selected='selected']"/>
+				<LeftCalendarMonthBtn xpath = "//div[@class='calendar left']//select[@class='monthselect']"/>
+				<LeftCalenderAvailMonths xpath ="//div[@class='calendar left']//select[@class='monthselect']/option"/>
+				<LeftCalSelectedMonth xapth = "//div[@class='calendar left']//table[@class='table-condensed']//select[@class='monthselect']//option[@selected='selected']"/>
+				<LeftCalAvailDates xpath = "//div[@class='calendar left']//table[@class='table-condensed']/tbody/tr/td[contains(@class,'available')]"/>
+				<RightCalYearBtn xpath ="//div[@class='calendar right']//select[@class='yearselect']"/>
+				<RightCalAvailYears xpath = "//div[@class='calendar right']//select[@class='yearselect']/option"/>
+				<RightCalMonthBtn xpath ="//div[@class='calendar right']//select[@class='monthselect']"/>
+				<RightCalenderAvailMonths xpath ="//div[@class='calendar right']//select[@class='monthselect']/option"/>
+				<RightCalSelectedMonth xapth ="//div[@class='calendar right']//select[@class='monthselect']//option[@selected='selected']"/>
+				<RightCalAvailDates xpath = "//div[@class='calendar right']//table[@class='table-condensed']//tbody//tr//td[contains(@class,'available')]"/>
+			</Calendar>
+			
+			
+			<ApplyBtn xpath ="//div[@class='daterangepicker dropdown-menu ltr show-calendar opensright dropup']//button[@class='applyBtn btn btn-sm btn-success']"/>
+			<CancelBtn xpath="//div[@class='daterangepicker dropdown-menu ltr show-calendar opensright dropup']//button[@class='cancelBtn btn btn-sm btn-default']"/>
+				
+		</Common>
+		<BackupJobReports xpath="//li[@value='Backup Jobs']//span[text()='Backup Jobs']">
+			<Title  xpath="//h4[@class='modal-title']//span[text()='Create Backup Jobs Report']"/>
+			<top10sources>
+			<filter xpath ="//div[@class='chart-dropdown']"/>
+			<filterOptions xpath="//div[@class='Select-menu-outer']//div[@role='option']"/>
+			
+			</top10sources>
+		</BackupJobReports>
+		<RecoveryJobReports xpath="//li[@value='Recovery Jobs']">
+    		<Title  xpath="//h4[@class='modal-title']//span[text()='Create Recovery Jobs Report']"/>
+      	 </RecoveryJobReports>
+    	 <DataTransferReports xpath = "//li[@value='Data Transfer']">
+    		 <Title xpath ="//h4[@class='modal-title']//span[text()='Create Data Transfer Report']"/>
+    	 </DataTransferReports>
+    	<CapacityUsageReports xpath ="//li[@value='Capacity Usage']">
+    		 <Title xpath ="//h4[@class='modal-title']//span[text()='Create Capacity Usage Report']"/>
+    	</CapacityUsageReports>
+    	<ManagedReportSchedules xpath="//li[@value='Manage Report Schedules']">
+			<SerachTab xpath="//button[@class='arrow']" />
+			<ScheduleFor xpath="//div[@class='Select has-value is-clearable is-searchable Select--multi']//span[@class='Select-arrow']" />
+			<ClearScheduleFor xpath="//span[@class='Select-clear']" />
+			<SelcetsScheduleMenu xpath="//span[@id='react-select-11--value']" />
+			<ReportTye xpath="//span[@id='react-select-12--value']" />
+			<SearchBtn xpath="//span[text()='Search']" />
+			<ClearallBtn xpath="//span[text()='Clear All']" />
+			<ClearSearchFilter xpath="//button[@class='clear-all']" />
+			<TableHeadr xpath="//div[@class='rt-thead -header']" />
+			<Rows xpath="//div[@class='rt-tr-group']"></Rows>
+			<Columns xpath="/div/div" />
+			<DeleteReportScheduleTitle xpath = "//div[@class='danger modal-header']//span[text()='Delete Report Schedule']"/>
+			<DeleteReportInstance xpath = "//div[@class='checkbox-wrapper']//input[@id='deleteInstance']"/>
+		</ManagedReportSchedules>
+		<Update xpath = "//span[text()='Update']"/>
+		</Reports>
+  </Analyze>
+  <Common>
+    <AlertDiv xpath = "//div[@class='g-alert-container']//div[@role='alert']"></AlertDiv>
+  	<Form xpath="//form">
+  		<Cancel xpath = "//form//*[text()='Cancel']"></Cancel>
+  		<Save xpath = "//form//button[@type='submit']"></Save>
+  	</Form>
+  	<Cancel xpath = "//span[text()='Cancel']"></Cancel>
+  	<Save xpath = "//button/span[text()='Save']"></Save>
+  	<ToastMessage xpath="//div[@class='alert-content ']">
+  		<Close xpath = "//span[@role='button']"></Close>
+  	</ToastMessage>
+  	<BreadCrumb xpath="//ol[@aria-label='breadcrumbs']"></BreadCrumb>
+  	<ClearAllFilters xpath="//button[@class='clear-all']"></ClearAllFilters>
+  	<Table>
+ 		<Headers xpath ="//div[@role='columnheader']"></Headers>
+ 		<Rows xpath ="//div[@class='rt-tr-group']"></Rows>
+ 		<Columns xpath ="/div/div"></Columns>
+ 		<Body  xpath ="//div[@class='rt-tbody']"></Body>
+ 	</Table>
+	<Totalnumber xpath ="//div[@class='left-section']//span[@class='dark-gray-text']"/>
+ 	<ContextualActions xpath = "//div[@class='dropdown btn-group']//button[@role='button']//span[@class='caret']">
+		<StartBackup xpath = "//a[@role='menuitem']//span[text()='Start Backup']"/>
+		<CancelBackup xpath = "//a[@role='menuitem']//span[text()='Cancel Backup']"/>
+		<StartRecovery xpath = "//a[@role='menuitem']//span[text()='Start Recovery']"/>
+		<AssignPolicy xpath = "//a[@role='menuitem']//span[text()='Assign Policy']"/>
+		<RemovePolicy xpath = "//a[@role='menuitem']//span[text()='Remove Policy']"/>
+		<DeployPolicy xpath = "//a[@role='menuitem']//span[text()='Deploy Policy']"/>
+		<Delete xpath = "//a[@role='menuitem']//span[text()='Delete']"/>
+	</ContextualActions>
+	<RecoveryPoints xpath = "//ul[@class='nav nav-tabs']//a[@role='tab']//span[text()='Recovery Points']"/>
+	<RecoveryWizard xpath = "//div[@class='clearfix m-0 tab-wrapper horizontal-tab-wrapper']//span[text()='Recovery Wizard']">
+		<Select xpath = "//div[@class='dropdown open btn-group']"/>
+		<ImageFormat xpath = "//div[@class='content d-flex flex-column justify-content-center']//div[@class='dropdown open btn-group']//span[@class='caret']"/>
+		<DestinationPath xpath = "//div[@class='content-item d-flex flex-column align-items-start']//input[@id='to_path']"/>
+		<BrowseRecoveryPoint xpath = "//a[@class='recoveryPointLink']//span[text()='Browse Recovery Point']"/>
+		<ImgTable xpath = "//div[@class='dojoxGridRowTable']"/>
+		<ImgContent xpath = "//div[@class='dojoxGridContent']"/>
+		<RestoreUsingCloudDirectAgent xpath="//div[@class='dijitReset dijitStretch dijitButtonContents']//span[text()='Restore Using Cloud Direct Agent']"/>
+		<BrowseRecoveryPointFrame xpath = "//div[@class='modal-dialog']//iframe[@target='_parent']"/>
+		<NextButton xpath = "//div[@class='footer']//span[text()='Next']"/>
+		<CancelButton xpath = "//div[@class='footer']//span[text()='Cancel']"/>
+		<RecoverOnTheOriginalSourceMachine xpath = "//label[@for='originalMachineRadio']"/>
+		<RecoverOnToAnotherMachine xpath = "//label[@for='anotherMachineRadio']"/>
+		<RestoreButton xpath = "//div[@class='footer']//span[text()='Restore']"/>
+	</RecoveryWizard>
+ 	<SearchInput xpath="//input[@class='input-search-box']"></SearchInput>
+ 	<SearchDropDown xpath="//button[@class='arrow']"></SearchDropDown>
+ 	<SearchIcon xpath = "//button[@class='search-icon d-flex align-items-center']"></SearchIcon>
+ 	<SelectFilterDiv xpath="//div[@class='select-wrapper']"></SelectFilterDiv>
+ 	<SearchBtn xpath="//button[@type='submit']"></SearchBtn>
+ 	<SavedSearchesDiv xpath = "//div[@class='quick-filter-wrapper d-flex']"></SavedSearchesDiv>
+ 	<SavedSearchesLabel xpath="//span[text()='Saved Searches:']"></SavedSearchesLabel>
+ 	<SearchResultsForDiv xpath = "//div[@class='saved-filter-wrapper d-flex']">
+ 		<Span xpath = "//div[@class='saved-filter-wrapper d-flex']/span/span]"></Span>
+ 	</SearchResultsForDiv>
+ 	<ClearAll xpath="//button[@type='reset']"></ClearAll>
+ 	<SaveSearch xpath = "//button[@class='save-filter']">
+ 		<Title xpath = "//h4[text()='Save Search']"></Title>
+ 		<NameField xpath = "//input[@name='saveSearchName']"></NameField>
+ 		<SaveSearchBtn xpath = "//div[@class='modal-dialog']//button[@type='submit']"></SaveSearchBtn>
+ 	</SaveSearch>
+ 	<SettingsBtn xpath="//div[@class='grid-dropdown']//button[@role='button']"></SettingsBtn>
+ 	<ManageSavedSearches xpath="//li/button[@type='button']">
+ 		<Title xpath="//div[text()='Manage Saved Searches']"></Title>
+ 		<BodyDiv xpath = "//div[@class='modal-body']"></BodyDiv>
+ 		<SearchString xpath = "//div[@class='modal-body']//input[@placeholder]"></SearchString>
+ 		<Delete xpath = "//button/span[text()='Delete']"></Delete>
+ 		<MakeDefaultDiv xpath = "//div[@class='default-checkbox-wrapper']"></MakeDefaultDiv>
+ 	</ManageSavedSearches>
+ 	<ColumnOptionsDiv xpath="//div[@class='react-grid-layout layout']"></ColumnOptionsDiv>
+ 	<ColumnLabels xpath = "//div[@class='react-grid-layout layout']//label"></ColumnLabels>
+ 	<DragDropHandle xpath="//span[@class='dragDropHandle']"></DragDropHandle>
+ 	<SelectedRowsLabel xpath="//label[@for='selectRows']"></SelectedRowsLabel>
+ 	<CloseDialog xpath = "//a[@class='close']"></CloseDialog>
+ 	
+  	<Pagination>
+  		<PaginationButton xpath="//div[@class='pr-3']/div[@class='dropup btn-group']/button"></PaginationButton>
+  		<PaginationMenu xpath="//div[@class='-pagination align-items-center']//ul[@role='menu']"></PaginationMenu>
+  		<RowsPerPageLabel xpath="//span[text()='Rows per page:']"></RowsPerPageLabel>
+  		<FirstButton xpath="//span/button[text()='First']"></FirstButton>
+  		<PreviousButton xpath="//span[@aria-label='Previous']"></PreviousButton>
+  		<NextButton xpath="//span[@aria-label='Next']"></NextButton>
+  		<LastButton xpath="//span/button/span[text()='Last']"></LastButton>
+  		<ActiveButton xpath="//li[@class='active']/a[@role='button']"></ActiveButton>
+  		<RowsPerPage xpath="//span/span[@class='dark-gray-text'][2]"></RowsPerPage>
+  		<TotalRows xpath="//span/span[@class='dark-gray-text'][3]"></TotalRows>
+  	</Pagination>
+
+ 	<ActionsButton xpath="//button[text()='Actions']">
+  		<NoActionsSupport xpath="//span[text()='No actions supported']"></NoActionsSupport>
+  	</ActionsButton>
+  	
+  	<SearchResultsFor xpath="//span[text()='Search results for : ']"></SearchResultsFor>
+  	<BulkActionCheckBox xpath="//div[@class='rt-td']//div[@class='checkbox-cell']"></BulkActionCheckBox>
+  	<SelectElementCheckBox xpath="//div[@class='checkbox-cell']"></SelectElementCheckBox>
+  	<SelectAllCheckBoxes xpath="//label[@for='select-th']"></SelectAllCheckBoxes>
+  	<SelectedCountLabel xpath="//label[@for='type-select']"></SelectedCountLabel>	
+  	<Confirm xpath="//span[text()='Confirm']" />
+	<Delete xpath="//button/span[text()='Delete']"></Delete>
+	<FilterMenu xpath="//ul[@role='menu']"></FilterMenu>
+	
+	<GridHeaderDiv xpath="//div[@class='grid-header-wrapper']"></GridHeaderDiv> 	
+  	<DialogTitle xpath = "//div[@class='modal-content']//h4"></DialogTitle>
+	
+	<ErrorMessage>
+		<Required xpath = "//span[text()='Required']"></Required>
+ 		<MinLength xpath = "//span[text()='Must be 3 characters or more']"></MinLength>
+ 		<MaxLength xpath = "//span[text()='Must be 128 characters or less']"></MaxLength>
+	</ErrorMessage>
+  </Common>
+
+</SPOG>

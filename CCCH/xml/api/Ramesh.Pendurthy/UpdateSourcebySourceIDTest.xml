@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SiteManagmentTestSuite" >
+	<parameter name= "baseURI" value= "http://xiang-gitlab"/>
+	<parameter name= "port" value= "9080"/>
+	<parameter name= "csrAdminUserName" value= "xiang.li@arcserve.com"/>
+	<parameter name= "csrAdminPassword" value= "Caworld_2017"/>
+	<parameter name= "logFolder" value= "E:\workspace\CCCH_Automation\log"/>
+	<parameter name= "runningMachine" value= "RAJPEN-LAPW10"/>
+	<parameter name="buildVersion" value="SPOGv1"/>
+	<test name="User Test" >
+		<classes> 
+		 <class name="api.sources.UpdateSourcebySourceIDTest" />
+		</classes>
+	 </test>
+</suite>

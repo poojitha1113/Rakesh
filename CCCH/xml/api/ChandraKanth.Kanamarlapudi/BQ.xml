@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Chandra_TestSuite">
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	<parameter name="csrAdminUserName"
+		value="Chandra_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName"
+		value="Chandra_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword"
+		value="Mclaren@2020" />
+	<parameter name="logFolder"
+		value="C:\workspace\CCCH_Automation\logE1" />
+	<parameter name="summaryFilePath"
+		value="C:\UI_Automation_Logs\BQ.html"></parameter>
+	<parameter name="mailRecipients"
+		value="ChandraKanth.Kanamarlapudi@arcserve.com;Prasad.Deverakonda@Arcserve.com"></parameter>
+	<parameter name="runningMachine"
+		value="CHAKAN-LAPW10.ARCSERVE.COM" />
+	<parameter name="buildVersion" value="SPOGv1" />
+
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	<test name="User Test">
+
+
+		<classes>
+			<class name="api.organizations.SuspendOrganizationTest" />
+			<class name="api.organizations.ResumeOrganizationTest" />
+
+
+<!-- Rakesh BQ -->
+			<class name="api.hypervisor.GetVMSForSpecifiedHypervisor"></class>
+			<class name="api.hypervisor.AddVMSForSpecifiedHypervisor"></class>
+			<class name="api.hypervisor.RefreshVMSForSpecifiedHypervisor"></class>
+			<class name="api.sources.GetSourcesbyTypesTest" />
+			<class name="api.sources.UpdateSourcebySourceIDTest" />
+			<class name="api.destination.GetDestinationbyTypesTest" />
+			<class name="api.destination.GetDestinationsById"></class>
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesTest" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdTrial" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChTrial" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdNearCapacity" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCdOverCapacity" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChNearCapacity" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesChOverCapacity" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExemption" />
+			<class name="api.businessintelligencereports.BusinessIntelligenceReportsTypesCDExpiration" />
+
+
+			<class name="api.sources.ConvertToAgentLessTest"/>
+			<class name="api.dashboard.GetTopCustomersTest"/>
+			<class name="api.dashboard.GetDashboardAccountSummaryTest"/>
+			<class name="api.organizations.DeleteOrganizationsCacheResourcesById"/>
+
+
+
+
+		</classes>
+	</test>
+</suite> 

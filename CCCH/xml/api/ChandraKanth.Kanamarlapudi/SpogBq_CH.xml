@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Chandra_AutoSuite_CH" > <!-- 27 -->
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	
+	<parameter name="csrAdminUserName" value="Chandra_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName" value="Chandra_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2020" />
+	
+	<parameter name="logFolder" value="E:\Automation_Logs" />
+	<parameter name="runningMachine" value="CHAKAN-LAPW10.ARCSERVE.COM" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	
+	<parameter name="summaryFilePath" value="E:\Automation_Logs\summaryfile_SPOG_CH.html"></parameter>
+	<parameter name="mailRecipients" value="ChandraKanth.Kanamarlapudi@arcserve.com;Prasad.Deverakonda@Arcserve.com;rakesh.chalamala@arcserve.com"></parameter>
+	<parameter name="enroll" value="true"></parameter>
+	
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	
+	 <test name="Recovery Point Servers"> <!-- 5 -->
+	 	<classes>
+	 		<class name="api.cloudrps.CreateCloudRPSTest"/> 
+	 		<class name="api.cloudrps.DeleteCloudRPSbyIdTest"/>
+	 		<class name="api.cloudrps.GetCloudRPSbyIdTest"/>
+	 		<class name="api.cloudrps.GetCloudRPSTest"/>
+	 		<class name="api.cloudrps.UpdateCloudRPSbyIdTest"/>
+	 	</classes>
+	 </test> 
+	 
+	 <test name="Cloud Hybrid Stores"> <!-- 7 -->
+	 	<classes>
+	 		<class name="api.cloudrps.cloudhybridstores.CreateCloudHybridStoresTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.DestroyCloudHybridStoreByIdTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.GetCloudHybridStoresByIdTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.GetCloudHybridStoresForSpecifiedRPSTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.StartCloudHybridStoreTest"></class>
+	 		<class name="api.cloudrps.cloudhybridstores.StopCloudHybridStoreTest"></class> 
+	 		<class name="api.cloudrps.cloudhybridstores.UpdateCloudHybridStoreByIdTest"></class>
+	 	</classes>
+	 </test>
+	 
+	 <test name="RPS Datastores"><!--  13 -->
+	 	<classes>
+	 		<class name="api.cloudrps.datastores.CreateRPSDataStoreTest"></class>	
+	 		<class name="api.cloudrps.datastores.UpdateRPSDataStoreTest"></class> 
+			<class name="api.cloudrps.datastores.UpdateDatastoreUsageTest"></class>
+		 	<class name="api.cloudrps.datastores.DeleteRPSDatastorebyIdTest"></class>
+		 	<class name="api.cloudrps.datastores.DestroyRPSDatastoreByIdTest"></class>
+		 	<class name="api.cloudrps.datastores.GetCloudRPSDatastoreByIdTest"></class>
+		 	<class name="api.cloudrps.datastores.GetCloudRPSDatastoresForSpecifiedRPS"></class>
+		 	<class name="api.cloudrps.datastores.GetDatastores"></class> 
+		 	<class name="api.destination.AssignDatastoretoDestinationTest"></class>
+		 	<class name="api.destination.UnassignDatastoretoDestinationTest"></class>
+		 	<class name="api.cloudrps.datastores.GetDatastoreForSpecifiedDestinationTest"></class>	 	
+		 	<class name="api.cloudrps.datastores.RPSDataStoreStartTest"></class>
+	 		<class name="api.cloudrps.datastores.RPSDataStoreStopTest"></class>
+	 	</classes>
+	 </test>
+	 
+	 <test name="Enable/Disable Policies"> <!-- 2 -->
+	 	<classes>
+	 		<class name="api.policies.DisablePolicyByIdTest"></class>
+			<class name="api.policies.EnablePolicyByIdTest"></class>
+	 	</classes>
+	 </test>
+	 
+	 
+	 
+	
+</suite> 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite">
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="csrReadOnlyUser" value="rakesh_csr_readonly@arcserve.com" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="runningMachine" value="RAKCHA-PCW10" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="testName" value="UI_test"></parameter>
+	<test name="Test">
+		<classes>
+
+
+			<class name="ui.protect.SourcesTest">
+				<methods>
+					<!-- <include name="sourceInformatoionTest"></include> -->
+					<!-- <include name="sourceSearchTest"></include> -->
+					<include name="manageSaveSearchTest"></include>
+					<!-- <include name="makeSavedSearchDefault"></include> -->
+				</methods>
+			</class>
+
+			<!-- <class name="ui.analyze.JobsTest"> <methods> <include name="sortTest"></include> 
+				<include name="jobSearchTest"></include> <include name="manageSaveSearchTest"></include> 
+				<include name="makeSavedSearchDefault"></include> </methods> </class> -->
+
+			<class name="Report.OpenReport"></class>
+		</classes>
+	</test>
+</suite> 

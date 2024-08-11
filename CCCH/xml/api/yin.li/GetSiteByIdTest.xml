@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="GetSiteById">
+	<!-- <listeners> <listener class-name="org.uncommons.reportng.HTMLReporter" 
+		/> <listener class-name="org.uncommons.reportng.JUnitXMLReporter" /> </listeners> -->
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="runningMachine" value="yourMachineHostname" />
+
+	<!-- <parameter name="baseURI" value="http://xiang-gitlab" /> <parameter 
+		name="port" value="9080" /> <parameter name="csrAdminUserName" value="xiang.li@arcserve.com" 
+		/> <parameter name="csrAdminPassword" value="Caworld_2017" /> -->
+
+	<!-- <parameter name="baseURI" value="http://tspog.zetta.net" /> <parameter 
+		name="port" value="8080" /> <parameter name="csrAdminUserName" value="tmp_xiang.li@arcserve.com" 
+		/> <parameter name="csrAdminPassword" value="Caworld_2017" /> -->
+
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+
+	<parameter name="logFolder" value="C:\workspace\CCCH_Automation\extent-report\" />
+
+	<test name="TestGetSiteById">
+		<classes>
+			<class name="test.restapi.site.TestGetSiteById">
+				<!-- <methods>
+					<include name="1Given_CsrAdmin_when_SiteIdNotExist_Should_Failed" />
+				</methods> -->
+			</class>
+		</classes>
+	</test>
+
+
+</suite>

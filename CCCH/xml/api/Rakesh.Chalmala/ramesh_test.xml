@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Rakesh_TestSuite4">
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="csrReadOnlyAdminName" value="rakesh_csr_readonly@arcserve.com" />
+	<parameter name="csrReadOnlyUser" value="rakesh_csr_readonly@arcserve.com"/>
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2013" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="runningMachine" value="RAKCHA-PCW10" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="summaryFilePath" value="C:\API_Automation_Logs\summaryfile.html"></parameter>
+	<parameter name="mailRecipients" value="rakesh.chalamala@arcserve.com"></parameter>
+	
+	<listeners>
+		<!-- <listener class-name="genericutil.AnnotationTransformer"></listener> -->
+		<listener class-name="base.prepare.BQSummaryReport"></listener>
+	</listeners>
+	
+	<test name="API_Test">
+		<classes> 			
+			<class name="api.reports.reportlistfilters.CreateReportListFiltersforSpecifiedUserTest" />
+            <class name="api.reports.reportlistfilters.GetReportListFiltersforLoggedInUser" />
+            <class name="api.reports.reportlistfilters.UpdateReportListFiltersByFilterIDForLoggedInUser" />
+            <class name="api.users.usercolumns.getUserColumnsForLoggedInUserTest" />
+            <class name="api.users.usercolumns.getUserColumnsByUserIdTest" />
+            <class name="api.users.jobs.columns.CreateJobColumnsForspecifiedUserTest" />
+            <class name="api.sources.GetSourcesbyTypesTest" />
+            <class name="api.sources.UpdateSourcebySourceIDTest" />
+           <!--  <class name="api.jobs.GetJobDatabyJobIdTest" />
+            <class name="api.logs.GetJoblogsbyJobIdTest" />
+            <class name="api.logs.GetLogsById" />
+            <class name="api.destination.updatedestinationbydestinationIdTest" />
+            <class name="api.destination.GetDestinationbyTypesTest" />
+            <class name="api.logs.GetLogsExportCsv" />
+            <class name="api.logs.GetOrganizationIdLogsExportCsv" />
+            <class name="api.organizations.GetOrganizationIdDestinationsbyTypes" />
+		 -->
+		</classes>
+	 </test>
+	 
+</suite> 

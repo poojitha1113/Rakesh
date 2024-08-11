@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite">
+	<parameter name="baseURI" value="http://tccapi.arcserve.com" />
+	<parameter name="port" value="8080" />
+	<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+	<parameter name="csrReadOnlyUser" value="eswari.sykam102@gmail.com" />
+	<parameter name="logFolder" value="C:\workspace\CCCH_Automation\log1" />
+	<parameter name="runningMachine" value="bharadwaj" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+
+	<test name="User Test">
+		<classes>
+
+			
+<class name="ui.spog.configure.createBrandingForOrganizationTest" /> 
+<class name="ui.spog.configure.UI_UploadLogoAndLogInImageTest" />
+		
+
+		</classes>
+	</test>
+</suite> 

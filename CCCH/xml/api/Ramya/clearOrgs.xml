@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RamyaAutoTestSuiteClearOrg">
+	<parameter name="baseURI" value="https://tccapi.arcserve.com" />
+	<parameter name="port" value="8443" />
+	<parameter name="csrAdminUserName" value="ramya_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Mclaren@2020" />
+	<parameter name="csrReadOnlyAdminName" value="SPOG_QA_RAMYA_BQ_csr_read_only@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Mclaren@2020" />
+	<parameter name="logFolder" value="C:\UI_Automation_Logs" />
+	<parameter name="runningMachine" value="RamyaAgent2012" />
+	<parameter name="buildVersion" value="SPOGv1" />
+	<parameter name="browserType" value="chrome" />
+	<parameter name="maxWaitTimeSec" value="10" />
+	<parameter name="uiBaseURI" value="https://tcc.arcserve.com"></parameter>
+	<parameter name="summaryFilePath" value="C:\API_Automation_Logs\ClearOrg.html"></parameter>
+	<parameter name="mailRecipients" value="ramya.nagepalli@arcserve.com;Prasad.Deverakonda@Arcserve.com"></parameter>
+	<parameter name="enroll" value="false"></parameter>
+	
+	<listeners>
+		 <listener class-name="genericutil.AnnotationTransformer"></listener> 
+		 <listener class-name="base.prepare.BQSummaryReport"></listener> 
+	</listeners>
+	
+	<test name="Left over org deletion">
+		<classes> 			
+	 			<class name="base.prepare.ClearOrgsTest"></class>
+	 			<!-- <class name="base.prepare.ClearOrgsTest"></class> -->
+	 			
+		</classes>
+	 </test>
+	 
+</suite> 

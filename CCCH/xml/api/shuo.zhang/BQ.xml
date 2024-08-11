@@ -1,0 +1,56 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UserTestSuite" >
+
+	<parameter name= "baseURI" value= "http://tccapi.arcserve.com"/>
+	  <parameter name= "port" value= "8080"/>
+<parameter name="csrAdminUserName" value="xiang_csr@arcserve.com" />
+	<parameter name="csrAdminPassword" value="Caworld_2017" />
+  <parameter name="csrReadOnlyAdminUserName" value="shuo_csr_read_only@arcserve.com" />
+	<parameter name="csrReadOnlyAdminPassword" value="Welcome*02" />
+
+	<parameter name= "logFolder" value= "E:\workspace\CCCH_Automation\extentReport1"/>
+	<parameter name= "buildVersion" value= "SPOGv1"/>
+		<parameter name= "browserType" value= "chrome"/>
+	<parameter name= "maxWaitTimeSec" value= "10"/>
+		<parameter name= "pmfKey" value= "shuo"/>
+	<test name="User Test" >
+
+ 		<classes> 
+  		
+		 <class name="api.users.LoginTest" />		
+		  	 <class name="api.CreateUserTest" />  
+			 <class name="api.GetUsersTest" />  
+			<class name="api.sources.CreateSourceTest" /> 
+  			 <class name="api.sources.GetSourcesTest" />  
+  			<class name="api.sources.GetSourcesSortTest" /> 
+  		 	<class name="api.sources.GetJobsBySourceIDTest" />
+		    <class name="api.logs.UpdateLogsByIdTest" />
+		 	<class name="api.users.picture.DeleteLoggedInUserPictureTest" /> 	
+	   		<class name="api.users.picture.DeleteUsersPictureTest" /> 
+ 	 		<class name="api.users.sources.columns.CreateUsersSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.UpdateUsersSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.DeleteUsersSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.GetUsersSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.CreateLoggedInUserSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.UpdateLoggedInUserSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.DeleteLoggedInUserSourcesColumnsTest" />
+		 	<class name="api.users.sources.columns.GetLoggedInUserSourcesColumnsTest" />
+		 	 <class name="api.organizations.sources.GetOrganizationsSourcesTypesAmountTest" /> 
+			 <class name="api.organizations.accounts.DeleteAccountPictureTest" />   
+	<!-- 	 <class name="api.users.RefreshTokenTest" />
+		 	 <class name="api.policy.GetPolicyColumnsTest" />
+		 	 <class name="api.users.policy.CreateUsersPolicyColumnsTest" />
+		 	 <class name="api.users.policy.DeleteUsersPolicyColumnsTest" />
+		 	 <class name="api.users.policy.UpdateUsersPolicyColumnsTest" />
+		 	 <class name="api.users.policy.GetUsersPolicyColumnsTest" /> 
+		 	 <class name="api.users.policy.CreateLoggedInUserPolicyColumnsTest" />  
+		 	 <class name="api.users.policy.DeleteLoggedInUserPolicyColumnsTest" />
+		 	 <class name="api.users.policy.UpdateLoggedInUserPolicyColumnsTest" />
+		 	 <class name="api.users.policy.GetLoggedInUserPolicyColumnsTest" />  
+		 	 <class name="api.organizations.EnrollOrganizationTest" />  
+		 	 <class name="api.organizations.GetSpecifiedOrganizationEntitlementTest" />  
+		 	 <class name="api.organizations.GetLoggedInUserOrganizationEntitlementTest" />  -->
+		 	 
+		</classes>
+	 </test>
+</suite>
